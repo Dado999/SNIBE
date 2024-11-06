@@ -18,24 +18,11 @@ import org.springframework.web.bind.annotation.*;
 public class UserController extends CrudController<Integer, UserDTO> {
 
     private final UserRepository userRepository;
-    @Autowired
-    private final UserService userServiceImpl;
     private final ModelMapper modelMapper;
     protected UserController(UserService service, UserRepository userRepository, UserService userServiceImpl, ModelMapper modelMapper) {
         super(UserDTO.class, service);
         this.userRepository = userRepository;
-        this.userServiceImpl = userServiceImpl;
         this.modelMapper = modelMapper;
-    }
-
-    @PostMapping("/login")
-    protected ResponseEntity<JwtResponse> loginAuth(@RequestBody LoginDTO login) throws NotFoundException {
-       /* User user = userRepository.findByUsername(login.getUsername());
-        if(user != null && user.getPassword().equals(login.getPassword()))
-            return ResponseEntity.ok(modelMapper.map(user,UserDTO.class));
-        else
-            return ResponseEntity.notFound().build(); */
-        return ResponseEntity.ok(userServiceImpl.login(login));
     }
 
 }

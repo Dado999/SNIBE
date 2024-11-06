@@ -21,14 +21,10 @@ public class UserServiceImpl extends CrudJpaService<User,Integer> implements Use
 
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
-    private final JwtService jwtService;
-    private final AuthenticationManager authenticationManager;
-    public UserServiceImpl(ModelMapper modelMapper, UserRepository userRepository, JwtService jwtService, AuthenticationManager authenticationManager) {
+    public UserServiceImpl(ModelMapper modelMapper, UserRepository userRepository) {
         super(userRepository, modelMapper, User.class);
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
-        this.jwtService = jwtService;
-        this.authenticationManager = authenticationManager;
     }
     @Override
     public UserDTO findByUsername(String username) throws NotFoundException {
@@ -36,19 +32,6 @@ public class UserServiceImpl extends CrudJpaService<User,Integer> implements Use
         if(user != null)
             return modelMapper.map(user,UserDTO.class);
         else return null;
-    }
-    @Override
-    public JwtResponse login(LoginDTO request) throws NotFoundException {
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getUsername(),request.getPassword())
-        );
-        UserDetails user = loadUserByUsername(request.getUsername());
-        boolean userBln = user !=null;
-       return (
-               userBln ?
-        JwtResponse.builder().jwtToken(jwtService.generateToken(user)).build() :
-               JwtResponse.builder().build()
-       );
     }
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

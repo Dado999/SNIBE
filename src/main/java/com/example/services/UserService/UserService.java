@@ -11,6 +11,4 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 public interface UserService extends CrudService<Integer>, UserDetailsService {
 
     UserDTO findByUsername(String username) throws NotFoundException;
-
-    JwtResponse login(LoginDTO login) throws NotFoundException;
 }
