@@ -1,28 +1,37 @@
 package com.example.models.entities;
 
+import com.example.base.BaseEntity;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-import java.time.Instant;
+import java.sql.Timestamp;
+import java.util.Objects;
 
-@Getter
-@Setter
 @Entity
-@Table(name = "comment")
-public class Comment {
+@Data
+public class Comment implements BaseEntity<Integer> {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "idcomment", nullable = false)
     private Integer id;
-
+    @Basic
     @Column(name = "content", nullable = false, length = 100)
     private String content;
-
+    @Basic
     @Column(name = "date", nullable = false)
-    private Instant date;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "topic_idTopics", nullable = false)
-    private com.example.sni.Topic topicIdtopics;
-
+    private Timestamp date;
+    @ManyToOne
+    @JoinColumn(name = "iduser", referencedColumnName = "iduser", nullable = false)
+    private User userByIduser;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Comment comment = (Comment) o;
+        return Objects.equals(id, comment.id) && Objects.equals(content, comment.content) && Objects.equals(date, comment.date) && Objects.equals(userByIduser, comment.userByIduser);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, content, date, userByIduser);
+    }
 }
