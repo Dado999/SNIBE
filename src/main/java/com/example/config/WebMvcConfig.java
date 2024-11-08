@@ -20,8 +20,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
 //                .allowedMethods("POST");
 
         registry.addMapping("/**")
-                .allowedOrigins("*")
-                .allowedMethods("GET", "POST") // Allowed HTTP methods
-                .allowedHeaders("*"); // Allowed request headers
+                .allowedOrigins("http://localhost:4200") // Frontend URL
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true); // Allows cookies/auth headers
+
     }
 }

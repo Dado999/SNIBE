@@ -13,11 +13,9 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
     private final AuthService authService;
 
-    public AuthController(AuthService authService) {
-        this.authService = authService;
-    }
+    public AuthController(AuthService authService) { this.authService = authService; }
     @PostMapping("/login")
-    protected ResponseEntity<JwtResponse> loginAuth(@RequestBody LoginDTO login) throws NotFoundException {
-        return ResponseEntity.ok(authService.login(login));
+    protected ResponseEntity<JwtResponse> loginAuth(@RequestBody LoginDTO request) throws NotFoundException {
+        return ResponseEntity.ok(authService.login(request));
     }
 }

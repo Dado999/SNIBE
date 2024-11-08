@@ -4,37 +4,36 @@ import com.example.config.JwtService;
 import com.example.exceptions.NotFoundException;
 import com.example.models.DTOs.LoginDTO;
 import com.example.models.entities.JwtResponse;
+import com.example.repositories.UserRepository;
 import com.example.services.UserService.UserService;
+import com.nimbusds.openid.connect.sdk.AuthenticationResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class AuthService {
 
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
-    private final UserService userServiceImpl;
-
-    public AuthService(JwtService jwtService, AuthenticationManager authenticationManager, UserService userServiceImpl) {
-        this.jwtService = jwtService;
-        this.authenticationManager = authenticationManager;
-        this.userServiceImpl = userServiceImpl;
-    }
+    private final UserService userService;
+    private final UserRepository userRepository;
 
     public JwtResponse login(LoginDTO request) throws NotFoundException {
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getUsername(),request.getPassword())
-        );
-        UserDetails user = userServiceImpl.loadUserByUsername(request.getUsername());
-        boolean userBln = user !=null;
-        return (
-                userBln ?
-                        JwtResponse.builder().jwtToken(jwtService.generateToken(user)).build()
-                        :
-                        JwtResponse.builder().build()
-        );
+        try {
+            authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Authentication failed: " + e.getMessage(), e);
+        }
+        var user = userRepository.findByUsername(request.getUsername()).orElseThrow();
+        var jwtToken = jwtService.generateToken(user);
+        return JwtResponse.builder().jwtToken(jwtToken).build();
     }
 }
