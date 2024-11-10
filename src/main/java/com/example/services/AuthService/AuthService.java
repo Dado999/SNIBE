@@ -6,13 +6,9 @@ import com.example.models.DTOs.LoginDTO;
 import com.example.models.entities.JwtResponse;
 import com.example.repositories.UserRepository;
 import com.example.services.UserService.UserService;
-import com.nimbusds.openid.connect.sdk.AuthenticationResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 @Service

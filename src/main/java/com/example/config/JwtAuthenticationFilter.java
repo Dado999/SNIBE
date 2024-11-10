@@ -1,5 +1,6 @@
 package com.example.config;
 
+import com.example.services.UserService.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +23,7 @@ import java.io.IOException;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtService jwtService;
-    private final UserDetailsService userService;
+    private final UserService userService;
 
     @Override
     protected void doFilterInternal(
