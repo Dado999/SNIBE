@@ -4,6 +4,8 @@ import com.example.exceptions.NotFoundException;
 import com.example.models.DTOs.UserDTO;
 import com.example.models.entities.User;
 import com.example.repositories.UserRepository;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ import java.util.Optional;
 public class UserService implements UserDetailsService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
+    @PersistenceContext
+    private EntityManager entityManager;
     public UserService(UserRepository userRepository, ModelMapper modelMapper) {
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
@@ -45,5 +49,12 @@ public class UserService implements UserDetailsService {
         } catch (NotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+    public UserDTO insert(UserDTO object) {
+        User entity = modelMapper.map(object,User.class);
+        entity.setId(null);
+        entity = userRepository.saveAndFlush(entity);
+        entityManager.refresh(entity);
+        return modelMapper.map(entity,UserDTO.class);
     }
 }
