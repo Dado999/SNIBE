@@ -22,16 +22,16 @@ public class Comment implements BaseEntity<Integer> {
     private Timestamp date;
     @ManyToOne
     @JoinColumn(name = "iduser", referencedColumnName = "iduser", nullable = false)
-    private User userByIduser;
+    private User iduser;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Comment comment = (Comment) o;
-        return Objects.equals(id, comment.id) && Objects.equals(content, comment.content) && Objects.equals(date, comment.date) && Objects.equals(userByIduser, comment.userByIduser);
+        return Objects.equals(id, comment.id) && Objects.equals(content, comment.content) && Objects.equals(date, comment.date) && Objects.equals(iduser, comment.iduser);
     }
     @Override
     public int hashCode() {
-        return Objects.hash(id, content, date, userByIduser);
+        return Objects.hash(id, content, date, iduser);
     }
 }

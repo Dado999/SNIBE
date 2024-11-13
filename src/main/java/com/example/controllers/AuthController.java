@@ -13,10 +13,12 @@ import com.example.services.UserService.UserService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
 import java.util.Random;
 
 @RestController
@@ -32,26 +34,24 @@ public class AuthController {
     }
 
     @PostMapping("/2fa")
-    protected Integer sendVerificationCode() throws NotFoundException {
-        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        UserDTO user = userService.findByUsername(userDetails.getUsername());
-        String mail = user.getEmail();
+    public Integer sendVerificationCode(@RequestBody Map<String, String> request) throws NotFoundException {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null || !(authentication.getPrincipal() instanceof UserDetails userDetails)) {
+            throw new NotFoundException();
+        }
 
-        Integer random = new Random().nextInt(1000,9999);
+        String email = userService.findByUsername(userDetails.getUsername()).getEmail();
+
+        Integer randomCode = new Random().nextInt(1000, 9999);
         String htmlContent = "<html><body>"
                 + "<p>Hello,</p>"
-                + "<p>Thank you for verifying your account. To complete the process, please use the following two-factor verification code:</p>"
-                + "<p style='text-align: center; font-size: 20px; font-weight: bold; color: #4CAF50;'>"
-                + random
-                + "</p>"
-                + "<p>If you did not request this, please ignore this email or contact support.</p>"
-                + "<br>"
-                + "<p>Best regards,<br>Tvoja staraaaaaaaaa</p>"
+                + "<p>Your two-factor verification code is:</p>"
+                + "<p style='font-weight: bold;'>" + randomCode + "</p>"
+                + "<p>If you did not request this, please ignore this email.</p>"
                 + "</body></html>";
 
-        emailService.sendSimpleEmail(mail, "Verification Email", htmlContent);
-
-
-        return random;
+        emailService.sendSimpleEmail(email, "Your Verification Code", htmlContent);
+        return randomCode;
     }
+
 }

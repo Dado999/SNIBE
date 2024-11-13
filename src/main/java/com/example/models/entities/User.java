@@ -1,6 +1,5 @@
 package com.example.models.entities;
 
-import com.example.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +8,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 
 import java.util.Collection;
 import java.util.List;
@@ -20,12 +18,13 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "`user`")
 public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "iduser", nullable = false)
-    private Integer id;
+    private Integer iduser;
 
     @Basic
     @Column(name = "name", nullable = false, length = 45)
@@ -59,20 +58,20 @@ public class User implements UserDetails {
     @Column(name = "role", nullable = false, length = 50)
     private String role;
 
-    @OneToMany(mappedBy = "userByIduser")
-    private List<Comment> commentsByIduser;
+    @OneToMany(mappedBy = "iduser")
+    private List<Comment> comments;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(email, user.email) && Objects.equals(reguser, user.reguser) && Objects.equals(permission, user.permission) && Objects.equals(role, user.role);
+        return Objects.equals(iduser, user.iduser) && Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(email, user.email) && Objects.equals(reguser, user.reguser) && Objects.equals(permission, user.permission) && Objects.equals(role, user.role);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, surname, username, password, email, reguser, permission, role);
+        return Objects.hash(iduser, name, surname, username, password, email, reguser, permission, role);
     }
 
     @Override
@@ -94,5 +93,9 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public void setId(Integer id){
+        this.iduser = id;
     }
 }

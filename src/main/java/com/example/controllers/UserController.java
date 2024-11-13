@@ -1,6 +1,7 @@
 package com.example.controllers;
 
 import com.example.exceptions.NotFoundException;
+import com.example.exceptions.UsernameAlreadyExists;
 import com.example.models.DTOs.UserDTO;
 import com.example.services.UserService.UserService;
 import lombok.RequiredArgsConstructor;
@@ -24,7 +25,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<UserDTO> register(@RequestBody UserDTO user){
+    public ResponseEntity<UserDTO> register(@RequestBody UserDTO user) throws NotFoundException, UsernameAlreadyExists {
        return ResponseEntity.ok(userService.insert(user));
     }
 }
