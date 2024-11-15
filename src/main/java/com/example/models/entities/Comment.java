@@ -20,6 +20,8 @@ public class Comment implements BaseEntity<Integer> {
     @Basic
     @Column(name = "date", nullable = false)
     private Timestamp date;
+    @Column(name = "category", nullable = false)
+    private String  category;
     @ManyToOne
     @JoinColumn(name = "iduser", referencedColumnName = "iduser", nullable = false)
     private User iduser;

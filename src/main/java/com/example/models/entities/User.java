@@ -1,10 +1,8 @@
 package com.example.models.entities;
 
+import com.example.repositories.CommentRepository;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,7 +13,7 @@ import java.util.Objects;
 
 @Data
 @Builder
-@NoArgsConstructor
+@RequiredArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "`user`")
@@ -57,9 +55,6 @@ public class User implements UserDetails {
     @Basic
     @Column(name = "role", nullable = false, length = 50)
     private String role;
-
-    @OneToMany(mappedBy = "iduser")
-    private List<Comment> comments;
 
     @Override
     public boolean equals(Object o) {
