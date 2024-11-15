@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -26,9 +27,9 @@ public class CommentController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteComment(@PathVariable Integer id) {
+    public ResponseEntity<Map<String,String>> deleteComment(@PathVariable Integer id) {
         commentService.deleteComment(id);
-        return ResponseEntity.ok("Comment deleted successfully");
+        return ResponseEntity.ok(Map.of("message","Comment deleted successfully!"));
     }
 
 }
