@@ -7,14 +7,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/comments")
 public class CommentController {
-
     private final CommentService commentService;
     @GetMapping("{category}")
     public ResponseEntity<Page<CommentDTO>> getByCategory(
@@ -25,11 +23,18 @@ public class CommentController {
         Page<CommentDTO> comments = commentService.getByCategory(category, page, size);
         return ResponseEntity.ok(comments);
     }
-
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Map<String,String>> deleteComment(@PathVariable Integer id) {
         commentService.deleteComment(id);
         return ResponseEntity.ok(Map.of("message","Comment deleted successfully!"));
     }
-
+    @PostMapping("update/{id}")
+    public ResponseEntity<Map<String,String>> updateComment(@PathVariable Integer id,
+                                                @RequestBody Map<String, String> requestBody){
+        String newContent = requestBody.get("content");
+        if (newContent == null || newContent.trim().isEmpty()) {
+            return ResponseEntity.badRequest().body(Map.of("message","Content must not be empty!"));
+        }
+        return ResponseEntity.ok(Map.of("message",commentService.updateComment(id, newContent)));
+    }
 }

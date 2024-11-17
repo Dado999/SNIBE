@@ -4,6 +4,7 @@ import com.example.models.DTOs.CommentDTO;
 import com.example.models.entities.Comment;
 import com.example.repositories.CommentRepository;
 import com.example.services.UserService.UserService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
@@ -33,4 +34,11 @@ public class CommentService {
         this.commentRepository.deleteById(id.longValue());
     }
 
+    public String updateComment(Integer id, String newContent) {
+        Comment comment = commentRepository.findById(Long.valueOf(id))
+                .orElseThrow(() -> new EntityNotFoundException("Comment not found with ID: " + id));
+        comment.setContent(newContent);
+        commentRepository.saveAndFlush(comment);
+        return "Comment updated successfully!";
+    }
 }

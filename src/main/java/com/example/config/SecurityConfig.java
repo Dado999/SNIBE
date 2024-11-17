@@ -42,6 +42,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/comments/culture").authenticated()
                         .requestMatchers(HttpMethod.POST, "/comments/science").authenticated()
                         .requestMatchers(HttpMethod.DELETE, "/comments/delete/**").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/comments/update/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(manager -> manager.sessionCreationPolicy(STATELESS))
