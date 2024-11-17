@@ -17,6 +17,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -59,5 +61,19 @@ public class UserService implements UserDetailsService {
         entity = userRepository.saveAndFlush(entity);
         entityManager.refresh(entity);
         return modelMapper.map(entity, UserDTO.class);
+    }
+
+
+    public List<UserDTO> getUnregisteredUsers(){
+        Optional<List<User>> unregisteredUserEntities = userRepository.getUserByReguser((byte) 0);
+
+        List<UserDTO> unregisteredUserDTO = new ArrayList<UserDTO>();
+        if(unregisteredUserEntities.isPresent()) {
+            for (User u : unregisteredUserEntities.get()) {
+                unregisteredUserDTO.add(modelMapper.map(u,UserDTO.class));
+            }
+            return unregisteredUserDTO;
+        }
+        return null;
     }
 }

@@ -22,6 +22,8 @@ public class Comment implements BaseEntity<Integer> {
     private Timestamp date;
     @Column(name = "category", nullable = false)
     private String  category;
+    @Column(name = "approved", columnDefinition = "TINYINT(1)")
+    private Integer approved;
     @ManyToOne
     @JoinColumn(name = "iduser", referencedColumnName = "iduser", nullable = false)
     private User iduser;

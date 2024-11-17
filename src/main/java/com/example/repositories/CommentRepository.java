@@ -13,6 +13,8 @@ import java.util.Optional;
 
 @Repository
 public interface CommentRepository extends JpaRepository<Comment, Long> {
-    Page<Comment> findByCategory(String category, Pageable pageable);
+    Page<Comment> findByCategoryAndApprovedOrderByDateDesc(String category, Integer approved, Pageable pageable);
+
+    Optional<List<Comment>> findByApproved(Integer approved);
 }
 

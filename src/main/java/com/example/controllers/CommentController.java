@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -23,6 +24,11 @@ public class CommentController {
         Page<CommentDTO> comments = commentService.getByCategory(category, page, size);
         return ResponseEntity.ok(comments);
     }
+
+    @GetMapping("/unapproved-messages")
+    public ResponseEntity<List<CommentDTO>> getUnapprovedComments(){
+        return ResponseEntity.ok(commentService.findUnapprovedComments());
+    }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Map<String,String>> deleteComment(@PathVariable Integer id) {
         commentService.deleteComment(id);
@@ -36,5 +42,9 @@ public class CommentController {
             return ResponseEntity.badRequest().body(Map.of("message","Content must not be empty!"));
         }
         return ResponseEntity.ok(Map.of("message",commentService.updateComment(id, newContent)));
+    }
+    @PostMapping("/insert")
+    public ResponseEntity<Map<String,String>> insertComment(@RequestBody CommentDTO commentDTO){
+        return ResponseEntity.ok(Map.of("message",commentService.insertComment(commentDTO)));
     }
 }
