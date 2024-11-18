@@ -76,4 +76,25 @@ public class UserService implements UserDetailsService {
         }
         return null;
     }
+
+    public UserDTO findById(Integer id){
+        return modelMapper.map(userRepository.findById(id),UserDTO.class);
+    }
+
+    public String updateUser(UserDTO userDTO) {
+        Optional<User> optionalUser = userRepository.findById(userDTO.getIduser());
+        if (optionalUser.isEmpty()) {
+            return "User not found";
+        }
+        User user = optionalUser.get();
+        user.setName(userDTO.getName());
+        user.setSurname(userDTO.getSurname());
+        user.setEmail(userDTO.getEmail());
+        user.setReguser(userDTO.getReguser());
+        user.setPermission(userDTO.getPermission());
+        user.setRole(userDTO.getRole());
+        userRepository.saveAndFlush(user);
+        return "User updated successfully";
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.example.config;
 import com.example.exceptions.NotFoundException;
+import com.example.models.entities.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -47,10 +48,17 @@ public class JwtService {
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24))
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256).compact();
     }
-    public String generateToken(
-            UserDetails userDetails
+
+//    public String generateToken(
+//            UserDetails userDetails
+//    ) throws NotFoundException {
+//        return generateToken(new HashMap<>(), userDetails);
+//    }
+    public String generateTokenWithClaims(
+            UserDetails user, Map<String,
+            Object> claims
     ) throws NotFoundException {
-        return generateToken(new HashMap<>(), userDetails);
+        return generateToken(claims, user);
     }
 
     private Key getSigningKey() {
