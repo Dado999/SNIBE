@@ -1,12 +1,14 @@
 package com.example.services.AuthService;
 
 import com.example.config.JwtService;
+import com.example.controllers.CommentController;
 import com.example.exceptions.NotFoundException;
 import com.example.models.DTOs.LoginDTO;
 import com.example.models.entities.JwtResponse;
 import com.example.repositories.UserRepository;
-import com.example.services.UserService.UserService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
@@ -20,44 +22,38 @@ public class AuthService {
 
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
-    private final UserService userService;
     private final UserRepository userRepository;
-
-//    public JwtResponse login(LoginDTO request) throws NotFoundException {
-//        try {
-//            authenticationManager.authenticate(
-//                    new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
-//            );
-//        } catch (Exception e) {
-//            throw new RuntimeException("Authentication failed: " + e.getMessage(), e);
-//        }
-//        var user = userRepository.findByUsername(request.getUsername()).orElseThrow();
-//        var jwtToken = jwtService.generateToken(user);
-//        return JwtResponse.builder().jwtToken(jwtToken).build();
-//    }
+    private static final Logger logger = LoggerFactory.getLogger(AuthService.class);
 
     public JwtResponse login(LoginDTO request) throws NotFoundException {
+        logger.info("Login attempt for username: {}", request.getUsername());
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
             );
+            logger.info("Authentication successful for username: {}", request.getUsername());
         } catch (Exception e) {
+            logger.error("Authentication failed for username: {}. Error: {}", request.getUsername(), e.getMessage());
             throw new RuntimeException("Authentication failed: " + e.getMessage(), e);
         }
 
-        // Fetch the user from the repository
         var user = userRepository.findByUsername(request.getUsername())
-                .orElseThrow(NotFoundException::new);
+                .orElseThrow(() -> {
+                    logger.error("User not found: {}", request.getUsername());
+                    return new NotFoundException();
+                });
 
-        // Check user's role and add it as a claim in the JWT
+        logger.debug("User found in database: {}", user);
         Map<String, Object> claims = new HashMap<>();
-        claims.put("role", user.getRole()); // Assuming user.getRole() returns "admin", "user", etc.
+        claims.put("role", user.getRole());
+        logger.debug("Added claims for JWT: {}", claims);
 
-        // Generate the token with additional claims
         var jwtToken = jwtService.generateTokenWithClaims(user, claims);
+        logger.info("Generated JWT for username: {}", request.getUsername());
+
         return JwtResponse.builder()
                 .jwtToken(jwtToken)
                 .build();
     }
-
 }
+

@@ -6,6 +6,8 @@ import com.example.models.DTOs.UserDTO;
 import com.example.services.EmailService.EmailService;
 import com.example.services.UserService.UserService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,39 +24,69 @@ public class UserController {
 
     private final UserService userService;
     private final EmailService emailService;
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @GetMapping("/get-current-user")
     public ResponseEntity<UserDTO> getCurrentUser() throws NotFoundException {
+        logger.info("Fetching the current authenticated user.");
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return ResponseEntity.ok(userService.findByUsername(userDetails.getUsername()));
+        String username = userDetails.getUsername();
+        logger.debug("Authenticated user: {}", username);
+        UserDTO userDTO = userService.findByUsername(username);
+        logger.info("Successfully retrieved current user: {}", username);
+        return ResponseEntity.ok(userDTO);
     }
+
     @PostMapping("/register")
     public ResponseEntity<UserDTO> register(@RequestBody UserDTO user) throws NotFoundException, UsernameAlreadyExists {
-       return ResponseEntity.ok(userService.insert(user));
+        logger.info("Attempting to register a new user with username: {}", user.getUsername());
+        UserDTO registeredUser = userService.insert(user);
+        logger.info("User registered successfully with username: {}", registeredUser.getUsername());
+        return ResponseEntity.ok(registeredUser);
     }
 
     @GetMapping("/get-permission")
-    public ResponseEntity<Map<String,String>> getPermission(){
+    public ResponseEntity<Map<String, String>> getPermission() {
+        logger.info("Fetching permissions for the current authenticated user.");
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        UserDTO u = userService.findByUsername(userDetails.getUsername());
-        System.out.println(u.getPermission());
-        return ResponseEntity.ok(Map.of("permission", u.getPermission()));
+        String username = userDetails.getUsername();
+        logger.debug("Authenticated user: {}", username);
+        UserDTO user = userService.findByUsername(username);
+        String permission = user.getPermission();
+        logger.info("Permission retrieved for user {}: {}", username, permission);
+        return ResponseEntity.ok(Map.of("permission", permission));
     }
+
     @GetMapping("/get-unregistered-users")
-    public ResponseEntity<List<UserDTO>> getAllUnregisteredUsers(){
-        return ResponseEntity.ok(userService.getUnregisteredUsers());
+    public ResponseEntity<List<UserDTO>> getAllUnregisteredUsers() {
+        logger.info("Fetching all unregistered users.");
+        List<UserDTO> unregisteredUsers = userService.getUnregisteredUsers();
+        logger.info("Successfully retrieved {} unregistered users.", unregisteredUsers.size());
+        return ResponseEntity.ok(unregisteredUsers);
     }
+
     @PostMapping("/update/{id}")
     public ResponseEntity<Map<String, String>> updateUser(@PathVariable Integer id, @RequestBody UserDTO userDTO) {
-        // Validate email and user DTO
+        logger.info("Attempting to update user with ID: {}", id);
+
         if (userDTO.getEmail() == null || userDTO.getEmail().isEmpty()) {
+            logger.warn("Update request for user ID {} failed: Email is missing.", id);
             return ResponseEntity.badRequest().body(Map.of("error", "Email is required"));
         }
+
+        logger.debug("Updating user: {}", userDTO);
         String updateMessage = userService.updateUser(userDTO);
+        logger.info("User with ID {} updated successfully.", id);
+
         sendRegistrationEmail(userDTO.getEmail());
+        logger.info("Registration email sent to: {}", userDTO.getEmail());
 
         return ResponseEntity.ok(Map.of("message", updateMessage));
     }
+
     private void sendRegistrationEmail(String email) {
+        logger.info("Preparing to send registration email to: {}", email);
+
         String htmlContent = """
         <html>
         <body style='font-family: Arial, sans-serif; line-height: 1.6;'>
@@ -67,7 +99,9 @@ public class UserController {
         </body>
         </html>
         """;
-        emailService.sendSimpleEmail(email, "Account Registration Confirmation", htmlContent);
-    }
 
+        emailService.sendSimpleEmail(email, "Account Registration Confirmation", htmlContent);
+        logger.info("Email sent to: {}", email);
+    }
 }
+

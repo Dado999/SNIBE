@@ -2,6 +2,7 @@ package com.example.config;
 
 import com.example.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -44,4 +45,15 @@ public class AppConfig {
     public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    public FilterRegistrationBean<WafFilter> myWafFilter() {
+        WafFilter wafFilter = new WafFilter();
+        FilterRegistrationBean<WafFilter> registrationBean = new FilterRegistrationBean<>();
+        registrationBean.setFilter(wafFilter);
+        registrationBean.addUrlPatterns("/*");
+        return registrationBean;
+    }
+
+
 }
