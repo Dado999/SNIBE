@@ -20,5 +20,5 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     @Query(value = "SELECT * FROM user u WHERE u.username = :username OR u.email = :email LIMIT 1", nativeQuery = true)
     Optional<User> findFirstByUsernameOrEmail(@Param("username") String username, @Param("email") String email) throws NotFoundException;
 
-    Optional<List<User>> getUserByReguser(Byte reguser) throws NotFoundException;
+    Optional<List<User>> getUserByReguserOrderByIduserDesc(Byte reguser) throws NotFoundException;
 }

@@ -91,7 +91,7 @@ public class UserService implements UserDetailsService {
 
     public List<UserDTO> getUnregisteredUsers() {
         logger.info("Fetching all unregistered users...");
-        Optional<List<User>> unregisteredUserEntities = userRepository.getUserByReguser((byte) 0);
+        Optional<List<User>> unregisteredUserEntities = userRepository.getUserByReguserOrderByIduserDesc((byte) 0);
 
         if (unregisteredUserEntities.isPresent()) {
             logger.info("Unregistered users found: {}", unregisteredUserEntities.get().size());

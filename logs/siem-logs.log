@@ -5458,3 +5458,1409 @@ com.example.exceptions.UsernameAlreadyExists: Chosen username already exists!
 2024-11-23 18:35:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-23 18:35:51 - HikariPool-1 - Shutdown initiated...
 2024-11-23 18:35:51 - HikariPool-1 - Shutdown completed.
+2024-11-24 11:51:17 - Starting SniApplication using Java 23 with PID 16632 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 11:51:17 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 11:51:17 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 11:51:17 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-24 11:51:17 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-24 11:51:17 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:51:17 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 11:51:17 - Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2024-11-24 11:51:18 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:51:18 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 11:51:18 - Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2024-11-24 11:51:18 - Tomcat initialized with port 8080 (http)
+2024-11-24 11:51:18 - Starting service [Tomcat]
+2024-11-24 11:51:18 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 11:51:18 - Initializing Spring embedded WebApplicationContext
+2024-11-24 11:51:18 - Root WebApplicationContext: initialization completed in 1356 ms
+2024-11-24 11:51:18 - HikariPool-1 - Starting...
+2024-11-24 11:51:19 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@696dec90
+2024-11-24 11:51:19 - HikariPool-1 - Start completed.
+2024-11-24 11:51:19 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 11:51:19 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-24 11:51:19 - HHH000026: Second-level cache disabled
+2024-11-24 11:51:19 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 11:51:20 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 11:51:20 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:51:20 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-24 11:51:20 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 11:51:20 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 11:51:20 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 11:51:20 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 11:51:21 - LiveReload server is running on port 35729
+2024-11-24 11:51:21 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 11:51:21 - Started SniApplication in 4.67 seconds (process running for 6.057)
+2024-11-24 11:51:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24 11:51:34 - Initializing Servlet 'dispatcherServlet'
+2024-11-24 11:51:34 - Completed initialization in 2 ms
+2024-11-24 11:51:34 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 11:51:34 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 11:51:34 - Content-Type: application/json
+2024-11-24 11:51:34 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 11:51:34 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 11:51:34 - Content-Type: application/json
+2024-11-24 11:51:34 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 11:51:34 - Authentication request intercepted
+2024-11-24 11:51:34 - Login attempt for username: dado99
+2024-11-24 11:51:35 - Authentication successful for username: dado99
+2024-11-24 11:51:35 - User found in database: User(iduser=1, name=Damir, surname=Filipovic, username=dado99, password=$2a$12$UQdXQ8oCUIgtfiFkQfI1VOBMrxtysmDi3ItlQ0tnYm1jxgFO.xhme, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=ADMIN)
+2024-11-24 11:51:35 - Added claims for JWT: {role=ADMIN}
+2024-11-24 11:51:35 - Generating token with additional claims for user: dado99
+2024-11-24 11:51:35 - Generating token for user: dado99
+2024-11-24 11:51:35 - Retrieving signing key.
+2024-11-24 11:51:35 - Token generated successfully.
+2024-11-24 11:51:35 - Generated JWT for username: dado99
+2024-11-24 11:51:35 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU0OTUsImV4cCI6MTczMjUzMTg5NX0.ui9kCtxRpqK91x2I8u5PSWnUVmzvjnmclcbOQgyeWFw
+2024-11-24 11:51:35 - Extracting username from token.
+2024-11-24 11:51:35 - Extracting claim using claims resolver.
+2024-11-24 11:51:35 - Parsing token to extract claims.
+2024-11-24 11:51:35 - Retrieving signing key.
+2024-11-24 11:51:35 - Username extracted: dado99
+2024-11-24 11:51:35 - Username extracted from JWT: dado99
+2024-11-24 11:51:35 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 11:51:35 - Loading user by username: dado99
+2024-11-24 11:51:35 - User successfully loaded: dado99
+2024-11-24 11:51:35 - Validating token for user: dado99
+2024-11-24 11:51:35 - Extracting username from token.
+2024-11-24 11:51:35 - Extracting claim using claims resolver.
+2024-11-24 11:51:35 - Parsing token to extract claims.
+2024-11-24 11:51:35 - Retrieving signing key.
+2024-11-24 11:51:35 - Username extracted: dado99
+2024-11-24 11:51:35 - Extracting token expiration date.
+2024-11-24 11:51:35 - Extracting claim using claims resolver.
+2024-11-24 11:51:35 - Parsing token to extract claims.
+2024-11-24 11:51:35 - Retrieving signing key.
+2024-11-24 11:51:35 - Token is not expired.
+2024-11-24 11:51:35 - Token is valid.
+2024-11-24 11:51:35 - JWT token is valid for user: dado99
+2024-11-24 11:51:35 - Authentication set in SecurityContext for user: dado99
+2024-11-24 11:51:35 - Incoming request: http://localhost:8080/auth/2fa
+2024-11-24 11:51:35 - Content-Type: application/json
+2024-11-24 11:51:35 - Request passed WAF checks: http://localhost:8080/auth/2fa
+2024-11-24 11:51:35 - Incoming request: http://localhost:8080/auth/2fa
+2024-11-24 11:51:35 - Content-Type: application/json
+2024-11-24 11:51:35 - Request passed WAF checks: http://localhost:8080/auth/2fa
+2024-11-24 11:51:35 - Attempting to find user by username: dado99
+2024-11-24 11:51:35 - User found: dado99
+2024-11-24 11:51:35 - Sending an 2FA email to the user dado99, at mail: damirfilipovic999@gmail.com
+2024-11-24 11:51:35 - Preparing email to: damirfilipovic999@gmail.com
+2024-11-24 11:51:37 - Email successfully sent to: damirfilipovic999@gmail.com
+2024-11-24 11:54:23 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU0OTUsImV4cCI6MTczMjUzMTg5NX0.ui9kCtxRpqK91x2I8u5PSWnUVmzvjnmclcbOQgyeWFw
+2024-11-24 11:54:23 - Extracting username from token.
+2024-11-24 11:54:23 - Extracting claim using claims resolver.
+2024-11-24 11:54:23 - Parsing token to extract claims.
+2024-11-24 11:54:23 - Retrieving signing key.
+2024-11-24 11:54:23 - Username extracted: dado99
+2024-11-24 11:54:23 - Username extracted from JWT: dado99
+2024-11-24 11:54:23 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 11:54:23 - Loading user by username: dado99
+2024-11-24 11:54:23 - User successfully loaded: dado99
+2024-11-24 11:54:23 - Validating token for user: dado99
+2024-11-24 11:54:23 - Extracting username from token.
+2024-11-24 11:54:23 - Extracting claim using claims resolver.
+2024-11-24 11:54:23 - Parsing token to extract claims.
+2024-11-24 11:54:23 - Retrieving signing key.
+2024-11-24 11:54:23 - Username extracted: dado99
+2024-11-24 11:54:23 - Extracting token expiration date.
+2024-11-24 11:54:23 - Extracting claim using claims resolver.
+2024-11-24 11:54:23 - Parsing token to extract claims.
+2024-11-24 11:54:23 - Retrieving signing key.
+2024-11-24 11:54:23 - Token is not expired.
+2024-11-24 11:54:23 - Token is valid.
+2024-11-24 11:54:23 - JWT token is valid for user: dado99
+2024-11-24 11:54:23 - Authentication set in SecurityContext for user: dado99
+2024-11-24 11:54:23 - Incoming request: http://localhost:8080/users/get-permission
+2024-11-24 11:54:23 - Request passed WAF checks: http://localhost:8080/users/get-permission
+2024-11-24 11:54:23 - Incoming request: http://localhost:8080/users/get-permission
+2024-11-24 11:54:23 - Request passed WAF checks: http://localhost:8080/users/get-permission
+2024-11-24 11:54:23 - Fetching permissions for the current authenticated user.
+2024-11-24 11:54:23 - Authenticated user: dado99
+2024-11-24 11:54:23 - Attempting to find user by username: dado99
+2024-11-24 11:54:23 - User found: dado99
+2024-11-24 11:54:23 - Permission retrieved for user dado99: MODIFY
+2024-11-24 11:54:30 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 11:54:30 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 11:54:30 - Content-Type: application/json
+2024-11-24 11:54:30 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 11:54:30 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 11:54:30 - Content-Type: application/json
+2024-11-24 11:54:30 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 11:54:30 - Authentication request intercepted
+2024-11-24 11:54:30 - Login attempt for username: dado99
+2024-11-24 11:54:31 - Authentication successful for username: dado99
+2024-11-24 11:54:31 - User found in database: User(iduser=1, name=Damir, surname=Filipovic, username=dado99, password=$2a$12$UQdXQ8oCUIgtfiFkQfI1VOBMrxtysmDi3ItlQ0tnYm1jxgFO.xhme, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=ADMIN)
+2024-11-24 11:54:31 - Added claims for JWT: {role=ADMIN}
+2024-11-24 11:54:31 - Generating token with additional claims for user: dado99
+2024-11-24 11:54:31 - Generating token for user: dado99
+2024-11-24 11:54:31 - Retrieving signing key.
+2024-11-24 11:54:31 - Token generated successfully.
+2024-11-24 11:54:31 - Generated JWT for username: dado99
+2024-11-24 11:54:31 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU2NzEsImV4cCI6MTczMjUzMjA3MX0.0zNFo0YPj-GnIHJem3-R9aAqY7yhA1xKAcz1PSq00HQ
+2024-11-24 11:54:31 - Extracting username from token.
+2024-11-24 11:54:31 - Extracting claim using claims resolver.
+2024-11-24 11:54:31 - Parsing token to extract claims.
+2024-11-24 11:54:31 - Retrieving signing key.
+2024-11-24 11:54:31 - Username extracted: dado99
+2024-11-24 11:54:31 - Username extracted from JWT: dado99
+2024-11-24 11:54:31 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 11:54:31 - Loading user by username: dado99
+2024-11-24 11:54:31 - User successfully loaded: dado99
+2024-11-24 11:54:31 - Validating token for user: dado99
+2024-11-24 11:54:31 - Extracting username from token.
+2024-11-24 11:54:31 - Extracting claim using claims resolver.
+2024-11-24 11:54:31 - Parsing token to extract claims.
+2024-11-24 11:54:31 - Retrieving signing key.
+2024-11-24 11:54:31 - Username extracted: dado99
+2024-11-24 11:54:31 - Extracting token expiration date.
+2024-11-24 11:54:31 - Extracting claim using claims resolver.
+2024-11-24 11:54:31 - Parsing token to extract claims.
+2024-11-24 11:54:31 - Retrieving signing key.
+2024-11-24 11:54:31 - Token is not expired.
+2024-11-24 11:54:31 - Token is valid.
+2024-11-24 11:54:31 - JWT token is valid for user: dado99
+2024-11-24 11:54:31 - Authentication set in SecurityContext for user: dado99
+2024-11-24 11:54:31 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:54:31 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:54:31 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:54:31 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:54:31 - Fetching all unregistered users.
+2024-11-24 11:54:31 - Fetching all unregistered users...
+2024-11-24 11:54:31 - Unregistered users found: 506
+2024-11-24 11:54:31 - Successfully retrieved 506 unregistered users.
+2024-11-24 11:55:05 - No Authorization header found or it does not start with 'Bearer '. Request URI: /users/register
+2024-11-24 11:55:05 - Incoming request: http://localhost:8080/users/register
+2024-11-24 11:55:05 - Content-Type: application/json
+2024-11-24 11:55:05 - Request passed WAF checks: http://localhost:8080/users/register
+2024-11-24 11:55:05 - Incoming request: http://localhost:8080/users/register
+2024-11-24 11:55:05 - Content-Type: application/json
+2024-11-24 11:55:05 - Request passed WAF checks: http://localhost:8080/users/register
+2024-11-24 11:55:05 - Attempting to register a new user with username: ime
+2024-11-24 11:55:05 - Attempting to insert new user: ime
+2024-11-24 11:55:05 - User successfully inserted: ime
+2024-11-24 11:55:05 - User registered successfully with username: ime
+2024-11-24 11:55:16 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 11:55:16 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 11:55:16 - Content-Type: application/json
+2024-11-24 11:55:16 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 11:55:16 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 11:55:16 - Content-Type: application/json
+2024-11-24 11:55:16 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 11:55:16 - Authentication request intercepted
+2024-11-24 11:55:16 - Login attempt for username: dado99
+2024-11-24 11:55:16 - Authentication successful for username: dado99
+2024-11-24 11:55:16 - User found in database: User(iduser=1, name=Damir, surname=Filipovic, username=dado99, password=$2a$12$UQdXQ8oCUIgtfiFkQfI1VOBMrxtysmDi3ItlQ0tnYm1jxgFO.xhme, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=ADMIN)
+2024-11-24 11:55:16 - Added claims for JWT: {role=ADMIN}
+2024-11-24 11:55:16 - Generating token with additional claims for user: dado99
+2024-11-24 11:55:16 - Generating token for user: dado99
+2024-11-24 11:55:16 - Retrieving signing key.
+2024-11-24 11:55:16 - Token generated successfully.
+2024-11-24 11:55:16 - Generated JWT for username: dado99
+2024-11-24 11:55:16 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU3MTYsImV4cCI6MTczMjUzMjExNn0.HYSIeyZ_gLF0JNc9P4uBbSMWLEcoWvFpzFaahc2Ud2w
+2024-11-24 11:55:16 - Extracting username from token.
+2024-11-24 11:55:16 - Extracting claim using claims resolver.
+2024-11-24 11:55:16 - Parsing token to extract claims.
+2024-11-24 11:55:16 - Retrieving signing key.
+2024-11-24 11:55:16 - Username extracted: dado99
+2024-11-24 11:55:16 - Username extracted from JWT: dado99
+2024-11-24 11:55:16 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 11:55:16 - Loading user by username: dado99
+2024-11-24 11:55:16 - User successfully loaded: dado99
+2024-11-24 11:55:16 - Validating token for user: dado99
+2024-11-24 11:55:16 - Extracting username from token.
+2024-11-24 11:55:16 - Extracting claim using claims resolver.
+2024-11-24 11:55:16 - Parsing token to extract claims.
+2024-11-24 11:55:16 - Retrieving signing key.
+2024-11-24 11:55:16 - Username extracted: dado99
+2024-11-24 11:55:16 - Extracting token expiration date.
+2024-11-24 11:55:16 - Extracting claim using claims resolver.
+2024-11-24 11:55:16 - Parsing token to extract claims.
+2024-11-24 11:55:16 - Retrieving signing key.
+2024-11-24 11:55:16 - Token is not expired.
+2024-11-24 11:55:16 - Token is valid.
+2024-11-24 11:55:16 - JWT token is valid for user: dado99
+2024-11-24 11:55:16 - Authentication set in SecurityContext for user: dado99
+2024-11-24 11:55:16 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:55:16 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:55:16 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:55:16 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:55:16 - Fetching all unregistered users.
+2024-11-24 11:55:16 - Fetching all unregistered users...
+2024-11-24 11:55:16 - Unregistered users found: 507
+2024-11-24 11:55:16 - Successfully retrieved 507 unregistered users.
+2024-11-24 11:57:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:57:32 - HikariPool-1 - Shutdown initiated...
+2024-11-24 11:57:32 - HikariPool-1 - Shutdown completed.
+2024-11-24 11:57:57 - Starting SniApplication using Java 23 with PID 18484 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 11:57:57 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 11:57:57 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 11:57:57 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-24 11:57:57 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-24 11:57:57 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:57:57 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 11:57:57 - Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2024-11-24 11:57:57 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:57:57 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 11:57:57 - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2024-11-24 11:57:58 - Tomcat initialized with port 8080 (http)
+2024-11-24 11:57:58 - Starting service [Tomcat]
+2024-11-24 11:57:58 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 11:57:58 - Initializing Spring embedded WebApplicationContext
+2024-11-24 11:57:58 - Root WebApplicationContext: initialization completed in 1266 ms
+2024-11-24 11:57:58 - HikariPool-1 - Starting...
+2024-11-24 11:57:58 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fa93879
+2024-11-24 11:57:58 - HikariPool-1 - Start completed.
+2024-11-24 11:57:58 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 11:57:58 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-24 11:57:58 - HHH000026: Second-level cache disabled
+2024-11-24 11:57:59 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 11:57:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 11:57:59 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:58:00 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-24 11:58:00 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 11:58:00 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 11:58:00 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 11:58:00 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 11:58:01 - LiveReload server is running on port 35729
+2024-11-24 11:58:01 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 11:58:01 - Started SniApplication in 4.355 seconds (process running for 4.955)
+2024-11-24 11:58:19 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24 11:58:19 - Initializing Servlet 'dispatcherServlet'
+2024-11-24 11:58:19 - Completed initialization in 1 ms
+2024-11-24 11:58:19 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 11:58:19 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 11:58:19 - Content-Type: application/json
+2024-11-24 11:58:19 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 11:58:19 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 11:58:19 - Content-Type: application/json
+2024-11-24 11:58:19 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 11:58:19 - Authentication request intercepted
+2024-11-24 11:58:19 - Login attempt for username: dado99
+2024-11-24 11:58:19 - Authentication successful for username: dado99
+2024-11-24 11:58:19 - User found in database: User(iduser=1, name=Damir, surname=Filipovic, username=dado99, password=$2a$12$UQdXQ8oCUIgtfiFkQfI1VOBMrxtysmDi3ItlQ0tnYm1jxgFO.xhme, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=ADMIN)
+2024-11-24 11:58:19 - Added claims for JWT: {role=ADMIN}
+2024-11-24 11:58:19 - Generating token with additional claims for user: dado99
+2024-11-24 11:58:19 - Generating token for user: dado99
+2024-11-24 11:58:19 - Retrieving signing key.
+2024-11-24 11:58:19 - Token generated successfully.
+2024-11-24 11:58:19 - Generated JWT for username: dado99
+2024-11-24 11:58:19 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU4OTksImV4cCI6MTczMjUzMjI5OX0.yf2YR4oYczmXepdqpHN1IAbjh12q-maefKI9GN6ktqM
+2024-11-24 11:58:19 - Extracting username from token.
+2024-11-24 11:58:19 - Extracting claim using claims resolver.
+2024-11-24 11:58:19 - Parsing token to extract claims.
+2024-11-24 11:58:19 - Retrieving signing key.
+2024-11-24 11:58:19 - Username extracted: dado99
+2024-11-24 11:58:19 - Username extracted from JWT: dado99
+2024-11-24 11:58:19 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 11:58:19 - Loading user by username: dado99
+2024-11-24 11:58:19 - User successfully loaded: dado99
+2024-11-24 11:58:19 - Validating token for user: dado99
+2024-11-24 11:58:19 - Extracting username from token.
+2024-11-24 11:58:19 - Extracting claim using claims resolver.
+2024-11-24 11:58:19 - Parsing token to extract claims.
+2024-11-24 11:58:19 - Retrieving signing key.
+2024-11-24 11:58:19 - Username extracted: dado99
+2024-11-24 11:58:19 - Extracting token expiration date.
+2024-11-24 11:58:19 - Extracting claim using claims resolver.
+2024-11-24 11:58:19 - Parsing token to extract claims.
+2024-11-24 11:58:19 - Retrieving signing key.
+2024-11-24 11:58:19 - Token is not expired.
+2024-11-24 11:58:19 - Token is valid.
+2024-11-24 11:58:19 - JWT token is valid for user: dado99
+2024-11-24 11:58:19 - Authentication set in SecurityContext for user: dado99
+2024-11-24 11:58:19 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:58:19 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:58:19 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:58:19 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:58:19 - Fetching all unregistered users.
+2024-11-24 11:58:19 - Fetching all unregistered users...
+2024-11-24 11:58:19 - Unregistered users found: 507
+2024-11-24 11:58:19 - Successfully retrieved 507 unregistered users.
+2024-11-24 11:58:47 - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-24 11:58:47 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:58:47 - HikariPool-1 - Shutdown initiated...
+2024-11-24 11:58:47 - HikariPool-1 - Shutdown completed.
+2024-11-24 11:58:47 - Starting SniApplication using Java 23 with PID 18484 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 11:58:47 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 11:58:47 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 11:58:47 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:58:47 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 11:58:47 - Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2024-11-24 11:58:47 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:58:47 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 11:58:47 - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2024-11-24 11:58:47 - Tomcat initialized with port 8080 (http)
+2024-11-24 11:58:47 - Starting service [Tomcat]
+2024-11-24 11:58:47 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 11:58:47 - Initializing Spring embedded WebApplicationContext
+2024-11-24 11:58:47 - Root WebApplicationContext: initialization completed in 348 ms
+2024-11-24 11:58:47 - HikariPool-2 - Starting...
+2024-11-24 11:58:47 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f5c5353
+2024-11-24 11:58:47 - HikariPool-2 - Start completed.
+2024-11-24 11:58:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 11:58:47 - HHH000026: Second-level cache disabled
+2024-11-24 11:58:47 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 11:58:48 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 11:58:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:58:48 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 11:58:48 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 11:58:48 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 11:58:48 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 11:58:48 - LiveReload server is running on port 35729
+2024-11-24 11:58:48 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 11:58:48 - Started SniApplication in 0.813 seconds (process running for 52.284)
+2024-11-24 11:58:48 - Condition evaluation unchanged
+2024-11-24 11:58:49 - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
+2024-11-24 11:58:49 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:58:49 - HikariPool-2 - Shutdown initiated...
+2024-11-24 11:58:49 - HikariPool-2 - Shutdown completed.
+2024-11-24 11:58:49 - Starting SniApplication using Java 23 with PID 18484 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 11:58:49 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 11:58:49 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 11:58:49 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:58:49 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 11:58:49 - Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2024-11-24 11:58:50 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:58:50 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 11:58:50 - Finished Spring Data repository scanning in 0 ms. Found 0 JDBC repository interfaces.
+2024-11-24 11:58:50 - Tomcat initialized with port 8080 (http)
+2024-11-24 11:58:50 - Starting service [Tomcat]
+2024-11-24 11:58:50 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 11:58:50 - Initializing Spring embedded WebApplicationContext
+2024-11-24 11:58:50 - Root WebApplicationContext: initialization completed in 262 ms
+2024-11-24 11:58:50 - HikariPool-3 - Starting...
+2024-11-24 11:58:50 - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f02c64d
+2024-11-24 11:58:50 - HikariPool-3 - Start completed.
+2024-11-24 11:58:50 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 11:58:50 - HHH000026: Second-level cache disabled
+2024-11-24 11:58:50 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 11:58:50 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 11:58:50 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:58:50 - Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'jwtAuthenticationFilter': Resolution of declared constructors on bean Class [com.example.config.JwtAuthenticationFilter] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3c7fe15c] failed
+2024-11-24 11:58:50 - Stopping service [Tomcat]
+2024-11-24 11:58:50 - The web application [ROOT] appears to have started a thread named [HikariPool-3 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1575)
+2024-11-24 11:58:50 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-11-24 11:58:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:58:50 - HikariPool-3 - Shutdown initiated...
+2024-11-24 11:58:50 - HikariPool-3 - Shutdown completed.
+2024-11-24 11:58:50 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-24 11:58:50 - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.example.sni.SniApplication.main(SniApplication.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtAuthenticationFilter': Resolution of declared constructors on bean Class [com.example.config.JwtAuthenticationFilter] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3c7fe15c] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:384) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1209) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4412) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:148) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 16 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/example/services/UserService/UserService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3621) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2786) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:379) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 56 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.example.services.UserService.UserService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:578) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:557) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528) ~[na:na]
+	... 60 common frames omitted
+2024-11-24 11:59:03 - Starting SniApplication using Java 23 with PID 4152 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 11:59:03 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 11:59:03 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 11:59:03 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-24 11:59:03 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-24 11:59:04 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:59:04 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 11:59:04 - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+2024-11-24 11:59:04 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 11:59:04 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 11:59:04 - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2024-11-24 11:59:05 - Tomcat initialized with port 8080 (http)
+2024-11-24 11:59:05 - Starting service [Tomcat]
+2024-11-24 11:59:05 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 11:59:05 - Initializing Spring embedded WebApplicationContext
+2024-11-24 11:59:05 - Root WebApplicationContext: initialization completed in 1228 ms
+2024-11-24 11:59:05 - HikariPool-1 - Starting...
+2024-11-24 11:59:05 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fe203a4
+2024-11-24 11:59:05 - HikariPool-1 - Start completed.
+2024-11-24 11:59:05 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 11:59:05 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-24 11:59:05 - HHH000026: Second-level cache disabled
+2024-11-24 11:59:05 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 11:59:06 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 11:59:06 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 11:59:06 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-24 11:59:07 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 11:59:07 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 11:59:07 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 11:59:07 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 11:59:07 - LiveReload server is running on port 35729
+2024-11-24 11:59:07 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 11:59:07 - Started SniApplication in 4.326 seconds (process running for 4.945)
+2024-11-24 11:59:11 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24 11:59:11 - Initializing Servlet 'dispatcherServlet'
+2024-11-24 11:59:11 - Completed initialization in 1 ms
+2024-11-24 11:59:11 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU4OTksImV4cCI6MTczMjUzMjI5OX0.yf2YR4oYczmXepdqpHN1IAbjh12q-maefKI9GN6ktqM
+2024-11-24 11:59:11 - Extracting username from token.
+2024-11-24 11:59:11 - Extracting claim using claims resolver.
+2024-11-24 11:59:11 - Parsing token to extract claims.
+2024-11-24 11:59:11 - Retrieving signing key.
+2024-11-24 11:59:11 - Username extracted: dado99
+2024-11-24 11:59:11 - Username extracted from JWT: dado99
+2024-11-24 11:59:11 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 11:59:11 - Loading user by username: dado99
+2024-11-24 11:59:12 - User successfully loaded: dado99
+2024-11-24 11:59:12 - Validating token for user: dado99
+2024-11-24 11:59:12 - Extracting username from token.
+2024-11-24 11:59:12 - Extracting claim using claims resolver.
+2024-11-24 11:59:12 - Parsing token to extract claims.
+2024-11-24 11:59:12 - Retrieving signing key.
+2024-11-24 11:59:12 - Username extracted: dado99
+2024-11-24 11:59:12 - Extracting token expiration date.
+2024-11-24 11:59:12 - Extracting claim using claims resolver.
+2024-11-24 11:59:12 - Parsing token to extract claims.
+2024-11-24 11:59:12 - Retrieving signing key.
+2024-11-24 11:59:12 - Token is not expired.
+2024-11-24 11:59:12 - Token is valid.
+2024-11-24 11:59:12 - JWT token is valid for user: dado99
+2024-11-24 11:59:12 - Authentication set in SecurityContext for user: dado99
+2024-11-24 11:59:12 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:59:12 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:59:12 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:59:12 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 11:59:12 - Fetching all unregistered users.
+2024-11-24 11:59:12 - Fetching all unregistered users...
+2024-11-24 11:59:12 - Unregistered users found: 507
+2024-11-24 11:59:12 - Successfully retrieved 507 unregistered users.
+2024-11-24 12:00:20 - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-11-24 12:00:20 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:00:21 - HikariPool-1 - Shutdown initiated...
+2024-11-24 12:00:21 - HikariPool-1 - Shutdown completed.
+2024-11-24 12:00:21 - Starting SniApplication using Java 23 with PID 4152 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 12:00:21 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 12:00:21 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 12:00:21 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:00:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 12:00:21 - Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2024-11-24 12:00:21 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:00:21 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 12:00:21 - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2024-11-24 12:00:21 - Tomcat initialized with port 8080 (http)
+2024-11-24 12:00:21 - Starting service [Tomcat]
+2024-11-24 12:00:21 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 12:00:21 - Initializing Spring embedded WebApplicationContext
+2024-11-24 12:00:21 - Root WebApplicationContext: initialization completed in 293 ms
+2024-11-24 12:00:21 - HikariPool-2 - Starting...
+2024-11-24 12:00:21 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16464a4d
+2024-11-24 12:00:21 - HikariPool-2 - Start completed.
+2024-11-24 12:00:21 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 12:00:21 - HHH000026: Second-level cache disabled
+2024-11-24 12:00:21 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 12:00:21 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 12:00:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:00:21 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 12:00:21 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 12:00:21 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 12:00:21 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 12:00:21 - LiveReload server is running on port 35729
+2024-11-24 12:00:21 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 12:00:21 - Started SniApplication in 0.726 seconds (process running for 78.901)
+2024-11-24 12:00:21 - Condition evaluation unchanged
+2024-11-24 12:00:23 - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-24 12:00:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:00:23 - HikariPool-2 - Shutdown initiated...
+2024-11-24 12:00:23 - HikariPool-2 - Shutdown completed.
+2024-11-24 12:00:23 - Starting SniApplication using Java 23 with PID 4152 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 12:00:23 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 12:00:23 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 12:00:23 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:00:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 12:00:23 - Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2024-11-24 12:00:23 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:00:23 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 12:00:23 - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2024-11-24 12:00:23 - Tomcat initialized with port 8080 (http)
+2024-11-24 12:00:23 - Starting service [Tomcat]
+2024-11-24 12:00:23 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 12:00:23 - Initializing Spring embedded WebApplicationContext
+2024-11-24 12:00:23 - Root WebApplicationContext: initialization completed in 229 ms
+2024-11-24 12:00:23 - HikariPool-3 - Starting...
+2024-11-24 12:00:23 - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11d15d91
+2024-11-24 12:00:23 - HikariPool-3 - Start completed.
+2024-11-24 12:00:23 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 12:00:23 - HHH000026: Second-level cache disabled
+2024-11-24 12:00:23 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 12:00:23 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 12:00:23 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:00:23 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 12:00:23 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 12:00:23 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 12:00:23 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 12:00:23 - LiveReload server is running on port 35729
+2024-11-24 12:00:23 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 12:00:23 - Started SniApplication in 0.683 seconds (process running for 81.082)
+2024-11-24 12:00:23 - Condition evaluation unchanged
+2024-11-24 12:01:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24 12:01:34 - Initializing Servlet 'dispatcherServlet'
+2024-11-24 12:01:34 - Completed initialization in 3 ms
+2024-11-24 12:01:34 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU4OTksImV4cCI6MTczMjUzMjI5OX0.yf2YR4oYczmXepdqpHN1IAbjh12q-maefKI9GN6ktqM
+2024-11-24 12:01:34 - Extracting username from token.
+2024-11-24 12:01:34 - Extracting claim using claims resolver.
+2024-11-24 12:01:34 - Parsing token to extract claims.
+2024-11-24 12:01:34 - Retrieving signing key.
+2024-11-24 12:01:34 - Username extracted: dado99
+2024-11-24 12:01:34 - Username extracted from JWT: dado99
+2024-11-24 12:01:34 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:01:34 - Loading user by username: dado99
+2024-11-24 12:01:34 - User successfully loaded: dado99
+2024-11-24 12:01:34 - Validating token for user: dado99
+2024-11-24 12:01:34 - Extracting username from token.
+2024-11-24 12:01:34 - Extracting claim using claims resolver.
+2024-11-24 12:01:34 - Parsing token to extract claims.
+2024-11-24 12:01:34 - Retrieving signing key.
+2024-11-24 12:01:34 - Username extracted: dado99
+2024-11-24 12:01:34 - Extracting token expiration date.
+2024-11-24 12:01:34 - Extracting claim using claims resolver.
+2024-11-24 12:01:34 - Parsing token to extract claims.
+2024-11-24 12:01:34 - Retrieving signing key.
+2024-11-24 12:01:34 - Token is not expired.
+2024-11-24 12:01:34 - Token is valid.
+2024-11-24 12:01:34 - JWT token is valid for user: dado99
+2024-11-24 12:01:34 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:01:34 - Incoming request: http://localhost:8080/users/update/22224
+2024-11-24 12:01:34 - Content-Type: application/json
+2024-11-24 12:01:34 - Request passed WAF checks: http://localhost:8080/users/update/22224
+2024-11-24 12:01:34 - Incoming request: http://localhost:8080/users/update/22224
+2024-11-24 12:01:34 - Content-Type: application/json
+2024-11-24 12:01:34 - Request passed WAF checks: http://localhost:8080/users/update/22224
+2024-11-24 12:01:34 - Attempting to update user with ID: 22224
+2024-11-24 12:01:34 - Updating user: UserDTO(iduser=22224, name=ime2, surname=ime2, username=ime, password=$2a$10$bcHYMu2ZXbuFJAEBjHvNO.rQQt7oXWtudeWJtw4mDALzsSiPn3tVK, email=ime@mail.com, reguser=1, permission=ADD, role=USER, commentsByIduser=null)
+2024-11-24 12:01:34 - Attempting to update user with ID: 22224
+2024-11-24 12:01:34 - User successfully updated: 22224
+2024-11-24 12:01:34 - User with ID 22224 updated successfully.
+2024-11-24 12:01:34 - Preparing to send registration email to: ime@mail.com
+2024-11-24 12:01:34 - Preparing email to: ime@mail.com
+2024-11-24 12:01:35 - Email successfully sent to: ime@mail.com
+2024-11-24 12:01:35 - Email sent to: ime@mail.com
+2024-11-24 12:01:35 - Registration email sent to: ime@mail.com
+2024-11-24 12:01:35 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU4OTksImV4cCI6MTczMjUzMjI5OX0.yf2YR4oYczmXepdqpHN1IAbjh12q-maefKI9GN6ktqM
+2024-11-24 12:01:35 - Extracting username from token.
+2024-11-24 12:01:35 - Extracting claim using claims resolver.
+2024-11-24 12:01:35 - Parsing token to extract claims.
+2024-11-24 12:01:35 - Retrieving signing key.
+2024-11-24 12:01:35 - Username extracted: dado99
+2024-11-24 12:01:35 - Username extracted from JWT: dado99
+2024-11-24 12:01:35 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:01:35 - Loading user by username: dado99
+2024-11-24 12:01:35 - User successfully loaded: dado99
+2024-11-24 12:01:35 - Validating token for user: dado99
+2024-11-24 12:01:35 - Extracting username from token.
+2024-11-24 12:01:35 - Extracting claim using claims resolver.
+2024-11-24 12:01:35 - Parsing token to extract claims.
+2024-11-24 12:01:35 - Retrieving signing key.
+2024-11-24 12:01:35 - Username extracted: dado99
+2024-11-24 12:01:35 - Extracting token expiration date.
+2024-11-24 12:01:35 - Extracting claim using claims resolver.
+2024-11-24 12:01:35 - Parsing token to extract claims.
+2024-11-24 12:01:35 - Retrieving signing key.
+2024-11-24 12:01:35 - Token is not expired.
+2024-11-24 12:01:35 - Token is valid.
+2024-11-24 12:01:35 - JWT token is valid for user: dado99
+2024-11-24 12:01:35 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:01:35 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:01:35 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:01:35 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:01:35 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:01:35 - Fetching all unregistered users.
+2024-11-24 12:01:35 - Fetching all unregistered users...
+2024-11-24 12:01:35 - Unregistered users found: 506
+2024-11-24 12:01:35 - Successfully retrieved 506 unregistered users.
+2024-11-24 12:02:42 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:02:42 - HikariPool-3 - Shutdown initiated...
+2024-11-24 12:02:42 - HikariPool-3 - Shutdown completed.
+2024-11-24 12:02:45 - Starting SniApplication using Java 23 with PID 11644 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 12:02:45 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 12:02:45 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 12:02:45 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-24 12:02:45 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-24 12:02:45 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:02:45 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 12:02:45 - Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+2024-11-24 12:02:45 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:02:45 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 12:02:45 - Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2024-11-24 12:02:46 - Tomcat initialized with port 8080 (http)
+2024-11-24 12:02:46 - Starting service [Tomcat]
+2024-11-24 12:02:46 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 12:02:46 - Initializing Spring embedded WebApplicationContext
+2024-11-24 12:02:46 - Root WebApplicationContext: initialization completed in 1352 ms
+2024-11-24 12:02:46 - HikariPool-1 - Starting...
+2024-11-24 12:02:46 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f82afc0
+2024-11-24 12:02:46 - HikariPool-1 - Start completed.
+2024-11-24 12:02:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 12:02:47 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-24 12:02:47 - HHH000026: Second-level cache disabled
+2024-11-24 12:02:47 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 12:02:48 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 12:02:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:02:48 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-24 12:02:49 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 12:02:49 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 12:02:49 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 12:02:49 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 12:02:50 - LiveReload server is running on port 35729
+2024-11-24 12:02:50 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 12:02:50 - Started SniApplication in 5.915 seconds (process running for 7.013)
+2024-11-24 12:03:03 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24 12:03:03 - Initializing Servlet 'dispatcherServlet'
+2024-11-24 12:03:03 - Completed initialization in 1 ms
+2024-11-24 12:03:03 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU4OTksImV4cCI6MTczMjUzMjI5OX0.yf2YR4oYczmXepdqpHN1IAbjh12q-maefKI9GN6ktqM
+2024-11-24 12:03:03 - Extracting username from token.
+2024-11-24 12:03:03 - Extracting claim using claims resolver.
+2024-11-24 12:03:03 - Parsing token to extract claims.
+2024-11-24 12:03:03 - Retrieving signing key.
+2024-11-24 12:03:03 - Username extracted: dado99
+2024-11-24 12:03:03 - Username extracted from JWT: dado99
+2024-11-24 12:03:03 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:03:03 - Loading user by username: dado99
+2024-11-24 12:03:03 - User successfully loaded: dado99
+2024-11-24 12:03:03 - Validating token for user: dado99
+2024-11-24 12:03:03 - Extracting username from token.
+2024-11-24 12:03:03 - Extracting claim using claims resolver.
+2024-11-24 12:03:03 - Parsing token to extract claims.
+2024-11-24 12:03:03 - Retrieving signing key.
+2024-11-24 12:03:03 - Username extracted: dado99
+2024-11-24 12:03:03 - Extracting token expiration date.
+2024-11-24 12:03:03 - Extracting claim using claims resolver.
+2024-11-24 12:03:03 - Parsing token to extract claims.
+2024-11-24 12:03:03 - Retrieving signing key.
+2024-11-24 12:03:03 - Token is not expired.
+2024-11-24 12:03:03 - Token is valid.
+2024-11-24 12:03:03 - JWT token is valid for user: dado99
+2024-11-24 12:03:03 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:03:03 - Incoming request: http://localhost:8080/users/update/1010
+2024-11-24 12:03:03 - Content-Type: application/json
+2024-11-24 12:03:03 - Request passed WAF checks: http://localhost:8080/users/update/1010
+2024-11-24 12:03:03 - Incoming request: http://localhost:8080/users/update/1010
+2024-11-24 12:03:03 - Content-Type: application/json
+2024-11-24 12:03:03 - Request passed WAF checks: http://localhost:8080/users/update/1010
+2024-11-24 12:03:04 - Attempting to update user with ID: 1010
+2024-11-24 12:03:04 - Updating user: UserDTO(iduser=1010, name=0, surname=Anderson, username=michaelanderson1, password=ec9b477f0db4c04247a8205ea173e0ff74979509c3544485145494ed1f4baeb3, email=michaelanderson1@example.com, reguser=1, permission=DELETE, role=MODERATOR, commentsByIduser=null)
+2024-11-24 12:03:11 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDU4OTksImV4cCI6MTczMjUzMjI5OX0.yf2YR4oYczmXepdqpHN1IAbjh12q-maefKI9GN6ktqM
+2024-11-24 12:03:11 - Extracting username from token.
+2024-11-24 12:03:11 - Extracting claim using claims resolver.
+2024-11-24 12:03:11 - Parsing token to extract claims.
+2024-11-24 12:03:11 - Retrieving signing key.
+2024-11-24 12:03:11 - Username extracted: dado99
+2024-11-24 12:03:11 - Username extracted from JWT: dado99
+2024-11-24 12:03:11 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:03:11 - Loading user by username: dado99
+2024-11-24 12:03:11 - User successfully loaded: dado99
+2024-11-24 12:03:11 - Validating token for user: dado99
+2024-11-24 12:03:11 - Extracting username from token.
+2024-11-24 12:03:11 - Extracting claim using claims resolver.
+2024-11-24 12:03:11 - Parsing token to extract claims.
+2024-11-24 12:03:11 - Retrieving signing key.
+2024-11-24 12:03:11 - Username extracted: dado99
+2024-11-24 12:03:11 - Extracting token expiration date.
+2024-11-24 12:03:11 - Extracting claim using claims resolver.
+2024-11-24 12:03:11 - Parsing token to extract claims.
+2024-11-24 12:03:11 - Retrieving signing key.
+2024-11-24 12:03:11 - Token is not expired.
+2024-11-24 12:03:11 - Token is valid.
+2024-11-24 12:03:11 - JWT token is valid for user: dado99
+2024-11-24 12:03:11 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:03:13 - Incoming request: http://localhost:8080/users/update/1010
+2024-11-24 12:03:13 - Content-Type: application/json
+2024-11-24 12:03:13 - Request passed WAF checks: http://localhost:8080/users/update/1010
+2024-11-24 12:03:13 - Incoming request: http://localhost:8080/users/update/1010
+2024-11-24 12:03:13 - Content-Type: application/json
+2024-11-24 12:03:13 - Request passed WAF checks: http://localhost:8080/users/update/1010
+2024-11-24 12:03:13 - Attempting to update user with ID: 1010
+2024-11-24 12:03:40 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s450ms608µs700ns).
+2024-11-24 12:03:40 - Attempting to update user with ID: 1010
+2024-11-24 12:03:40 - Updating user: UserDTO(iduser=1010, name=0, surname=Anderson, username=michaelanderson1, password=ec9b477f0db4c04247a8205ea173e0ff74979509c3544485145494ed1f4baeb3, email=michaelanderson1@example.com, reguser=1, permission=DELETE, role=MODERATOR, commentsByIduser=null)
+2024-11-24 12:03:40 - Attempting to update user with ID: 1010
+2024-11-24 12:04:07 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-24 12:04:07 - User successfully updated: 1010
+2024-11-24 12:04:07 - User with ID 1010 updated successfully.
+2024-11-24 12:04:07 - Preparing to send registration email to: michaelanderson1@example.com
+2024-11-24 12:04:08 - User successfully updated: 1010
+2024-11-24 12:04:53 - The executor associated with thread pool [http-nio-8080] has not fully shutdown. Some application threads may still be running.
+2024-11-24 12:04:53 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s676ms814µs400ns).
+2024-11-24 12:04:53 - User with ID 1010 updated successfully.
+2024-11-24 12:04:53 - Preparing to send registration email to: michaelanderson1@example.com
+2024-11-24 12:04:53 - Preparing email to: michaelanderson1@example.com
+2024-11-24 12:04:53 - Preparing email to: michaelanderson1@example.com
+2024-11-24 12:04:54 - Email successfully sent to: michaelanderson1@example.com
+2024-11-24 12:04:54 - Email sent to: michaelanderson1@example.com
+2024-11-24 12:04:54 - Registration email sent to: michaelanderson1@example.com
+2024-11-24 12:04:54 - Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.nio.channels.ClosedChannelException]
+2024-11-24 12:04:54 - Email successfully sent to: michaelanderson1@example.com
+2024-11-24 12:04:54 - Email sent to: michaelanderson1@example.com
+2024-11-24 12:04:54 - Registration email sent to: michaelanderson1@example.com
+2024-11-24 12:04:54 - Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.nio.channels.ClosedChannelException]
+2024-11-24 12:05:20 - Starting SniApplication using Java 23 with PID 18968 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 12:05:20 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 12:05:20 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 12:05:20 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-24 12:05:20 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-24 12:05:21 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:05:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 12:05:21 - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-11-24 12:05:21 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:05:21 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 12:05:21 - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2024-11-24 12:05:22 - Tomcat initialized with port 8080 (http)
+2024-11-24 12:05:22 - Starting service [Tomcat]
+2024-11-24 12:05:22 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 12:05:22 - Initializing Spring embedded WebApplicationContext
+2024-11-24 12:05:22 - Root WebApplicationContext: initialization completed in 1299 ms
+2024-11-24 12:05:22 - HikariPool-1 - Starting...
+2024-11-24 12:05:22 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40ea43a4
+2024-11-24 12:05:22 - HikariPool-1 - Start completed.
+2024-11-24 12:05:22 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 12:05:22 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-24 12:05:22 - HHH000026: Second-level cache disabled
+2024-11-24 12:05:22 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 12:05:23 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 12:05:23 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:05:23 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-24 12:05:24 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 12:05:24 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 12:05:24 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 12:05:24 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 12:05:25 - LiveReload server is running on port 35729
+2024-11-24 12:05:25 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 12:05:25 - Started SniApplication in 5.666 seconds (process running for 6.359)
+2024-11-24 12:05:56 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24 12:05:56 - Initializing Servlet 'dispatcherServlet'
+2024-11-24 12:05:56 - Completed initialization in 1 ms
+2024-11-24 12:05:56 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 12:05:56 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:05:56 - Content-Type: application/json
+2024-11-24 12:05:56 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:05:56 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:05:56 - Content-Type: application/json
+2024-11-24 12:05:56 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:05:56 - Authentication request intercepted
+2024-11-24 12:05:56 - Login attempt for username: dado99
+2024-11-24 12:05:57 - Authentication successful for username: dado99
+2024-11-24 12:05:57 - User found in database: User(iduser=1, name=Damir, surname=Filipovic, username=dado99, password=$2a$12$UQdXQ8oCUIgtfiFkQfI1VOBMrxtysmDi3ItlQ0tnYm1jxgFO.xhme, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=ADMIN)
+2024-11-24 12:05:57 - Added claims for JWT: {role=ADMIN}
+2024-11-24 12:05:57 - Generating token with additional claims for user: dado99
+2024-11-24 12:05:57 - Generating token for user: dado99
+2024-11-24 12:05:57 - Retrieving signing key.
+2024-11-24 12:05:57 - Token generated successfully.
+2024-11-24 12:05:57 - Generated JWT for username: dado99
+2024-11-24 12:05:57 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDYzNTcsImV4cCI6MTczMjUzMjc1N30.W61jGbyPr-nD5NqBzDcsU85eoufX3QE5kMUn_46T-I8
+2024-11-24 12:05:57 - Extracting username from token.
+2024-11-24 12:05:57 - Extracting claim using claims resolver.
+2024-11-24 12:05:57 - Parsing token to extract claims.
+2024-11-24 12:05:57 - Retrieving signing key.
+2024-11-24 12:05:57 - Username extracted: dado99
+2024-11-24 12:05:57 - Username extracted from JWT: dado99
+2024-11-24 12:05:57 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:05:57 - Loading user by username: dado99
+2024-11-24 12:05:57 - User successfully loaded: dado99
+2024-11-24 12:05:57 - Validating token for user: dado99
+2024-11-24 12:05:57 - Extracting username from token.
+2024-11-24 12:05:57 - Extracting claim using claims resolver.
+2024-11-24 12:05:57 - Parsing token to extract claims.
+2024-11-24 12:05:57 - Retrieving signing key.
+2024-11-24 12:05:57 - Username extracted: dado99
+2024-11-24 12:05:57 - Extracting token expiration date.
+2024-11-24 12:05:57 - Extracting claim using claims resolver.
+2024-11-24 12:05:57 - Parsing token to extract claims.
+2024-11-24 12:05:57 - Retrieving signing key.
+2024-11-24 12:05:57 - Token is not expired.
+2024-11-24 12:05:57 - Token is valid.
+2024-11-24 12:05:57 - JWT token is valid for user: dado99
+2024-11-24 12:05:57 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:05:57 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:05:57 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:05:57 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:05:57 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:05:57 - Fetching all unregistered users.
+2024-11-24 12:05:57 - Fetching all unregistered users...
+2024-11-24 12:05:58 - Unregistered users found: 505
+2024-11-24 12:05:58 - Successfully retrieved 505 unregistered users.
+2024-11-24 12:06:20 - No Authorization header found or it does not start with 'Bearer '. Request URI: /users/register
+2024-11-24 12:06:20 - Incoming request: http://localhost:8080/users/register
+2024-11-24 12:06:20 - Content-Type: application/json
+2024-11-24 12:06:20 - Request passed WAF checks: http://localhost:8080/users/register
+2024-11-24 12:06:20 - Incoming request: http://localhost:8080/users/register
+2024-11-24 12:06:20 - Content-Type: application/json
+2024-11-24 12:06:20 - Request passed WAF checks: http://localhost:8080/users/register
+2024-11-24 12:06:20 - Attempting to register a new user with username: ime3
+2024-11-24 12:06:20 - Attempting to insert new user: ime3
+2024-11-24 12:06:20 - User successfully inserted: ime3
+2024-11-24 12:06:20 - User registered successfully with username: ime3
+2024-11-24 12:06:27 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 12:06:27 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:06:27 - Content-Type: application/json
+2024-11-24 12:06:27 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:06:27 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:06:27 - Content-Type: application/json
+2024-11-24 12:06:27 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:06:27 - Authentication request intercepted
+2024-11-24 12:06:27 - Login attempt for username: dado99
+2024-11-24 12:06:28 - Authentication successful for username: dado99
+2024-11-24 12:06:28 - User found in database: User(iduser=1, name=Damir, surname=Filipovic, username=dado99, password=$2a$12$UQdXQ8oCUIgtfiFkQfI1VOBMrxtysmDi3ItlQ0tnYm1jxgFO.xhme, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=ADMIN)
+2024-11-24 12:06:28 - Added claims for JWT: {role=ADMIN}
+2024-11-24 12:06:28 - Generating token with additional claims for user: dado99
+2024-11-24 12:06:28 - Generating token for user: dado99
+2024-11-24 12:06:28 - Retrieving signing key.
+2024-11-24 12:06:28 - Token generated successfully.
+2024-11-24 12:06:28 - Generated JWT for username: dado99
+2024-11-24 12:06:28 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDYzODgsImV4cCI6MTczMjUzMjc4OH0.IaNo5TXfVXKfXOzjks2UqBjufZ84zjPqgJDrwcbOrP4
+2024-11-24 12:06:28 - Extracting username from token.
+2024-11-24 12:06:28 - Extracting claim using claims resolver.
+2024-11-24 12:06:28 - Parsing token to extract claims.
+2024-11-24 12:06:28 - Retrieving signing key.
+2024-11-24 12:06:28 - Username extracted: dado99
+2024-11-24 12:06:28 - Username extracted from JWT: dado99
+2024-11-24 12:06:28 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:06:28 - Loading user by username: dado99
+2024-11-24 12:06:28 - User successfully loaded: dado99
+2024-11-24 12:06:28 - Validating token for user: dado99
+2024-11-24 12:06:28 - Extracting username from token.
+2024-11-24 12:06:28 - Extracting claim using claims resolver.
+2024-11-24 12:06:28 - Parsing token to extract claims.
+2024-11-24 12:06:28 - Retrieving signing key.
+2024-11-24 12:06:28 - Username extracted: dado99
+2024-11-24 12:06:28 - Extracting token expiration date.
+2024-11-24 12:06:28 - Extracting claim using claims resolver.
+2024-11-24 12:06:28 - Parsing token to extract claims.
+2024-11-24 12:06:28 - Retrieving signing key.
+2024-11-24 12:06:28 - Token is not expired.
+2024-11-24 12:06:28 - Token is valid.
+2024-11-24 12:06:28 - JWT token is valid for user: dado99
+2024-11-24 12:06:28 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:06:28 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:06:28 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:06:28 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:06:28 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:06:28 - Fetching all unregistered users.
+2024-11-24 12:06:28 - Fetching all unregistered users...
+2024-11-24 12:06:28 - Unregistered users found: 506
+2024-11-24 12:06:28 - Successfully retrieved 506 unregistered users.
+2024-11-24 12:06:39 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDYzODgsImV4cCI6MTczMjUzMjc4OH0.IaNo5TXfVXKfXOzjks2UqBjufZ84zjPqgJDrwcbOrP4
+2024-11-24 12:06:39 - Extracting username from token.
+2024-11-24 12:06:39 - Extracting claim using claims resolver.
+2024-11-24 12:06:39 - Parsing token to extract claims.
+2024-11-24 12:06:39 - Retrieving signing key.
+2024-11-24 12:06:39 - Username extracted: dado99
+2024-11-24 12:06:39 - Username extracted from JWT: dado99
+2024-11-24 12:06:39 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:06:39 - Loading user by username: dado99
+2024-11-24 12:06:39 - User successfully loaded: dado99
+2024-11-24 12:06:39 - Validating token for user: dado99
+2024-11-24 12:06:39 - Extracting username from token.
+2024-11-24 12:06:39 - Extracting claim using claims resolver.
+2024-11-24 12:06:39 - Parsing token to extract claims.
+2024-11-24 12:06:39 - Retrieving signing key.
+2024-11-24 12:06:39 - Username extracted: dado99
+2024-11-24 12:06:39 - Extracting token expiration date.
+2024-11-24 12:06:39 - Extracting claim using claims resolver.
+2024-11-24 12:06:39 - Parsing token to extract claims.
+2024-11-24 12:06:39 - Retrieving signing key.
+2024-11-24 12:06:39 - Token is not expired.
+2024-11-24 12:06:39 - Token is valid.
+2024-11-24 12:06:39 - JWT token is valid for user: dado99
+2024-11-24 12:06:39 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:06:39 - Incoming request: http://localhost:8080/users/update/22225
+2024-11-24 12:06:39 - Content-Type: application/json
+2024-11-24 12:06:39 - Request passed WAF checks: http://localhost:8080/users/update/22225
+2024-11-24 12:06:39 - Incoming request: http://localhost:8080/users/update/22225
+2024-11-24 12:06:39 - Content-Type: application/json
+2024-11-24 12:06:39 - Request passed WAF checks: http://localhost:8080/users/update/22225
+2024-11-24 12:06:39 - Attempting to update user with ID: 22225
+2024-11-24 12:06:39 - Updating user: UserDTO(iduser=22225, name=ime3, surname=ime3, username=ime3, password=$2a$10$ktca7KD8v90/9y8tTpMaqepUpczymHNXYK8u.CQDVBBacpM/K68Ze, email=ime3@mail.com, reguser=1, permission=DELETE, role=ADMIN, commentsByIduser=null)
+2024-11-24 12:06:45 - Attempting to update user with ID: 22225
+2024-11-24 12:06:45 - User successfully updated: 22225
+2024-11-24 12:06:45 - User with ID 22225 updated successfully.
+2024-11-24 12:06:45 - Preparing to send registration email to: ime3@mail.com
+2024-11-24 12:06:45 - Preparing email to: ime3@mail.com
+2024-11-24 12:06:47 - Email successfully sent to: ime3@mail.com
+2024-11-24 12:06:47 - Email sent to: ime3@mail.com
+2024-11-24 12:06:47 - Registration email sent to: ime3@mail.com
+2024-11-24 12:06:47 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDYzODgsImV4cCI6MTczMjUzMjc4OH0.IaNo5TXfVXKfXOzjks2UqBjufZ84zjPqgJDrwcbOrP4
+2024-11-24 12:06:47 - Extracting username from token.
+2024-11-24 12:06:47 - Extracting claim using claims resolver.
+2024-11-24 12:06:47 - Parsing token to extract claims.
+2024-11-24 12:06:47 - Retrieving signing key.
+2024-11-24 12:06:47 - Username extracted: dado99
+2024-11-24 12:06:47 - Username extracted from JWT: dado99
+2024-11-24 12:06:47 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:06:47 - Loading user by username: dado99
+2024-11-24 12:06:47 - User successfully loaded: dado99
+2024-11-24 12:06:47 - Validating token for user: dado99
+2024-11-24 12:06:47 - Extracting username from token.
+2024-11-24 12:06:47 - Extracting claim using claims resolver.
+2024-11-24 12:06:47 - Parsing token to extract claims.
+2024-11-24 12:06:47 - Retrieving signing key.
+2024-11-24 12:06:47 - Username extracted: dado99
+2024-11-24 12:06:47 - Extracting token expiration date.
+2024-11-24 12:06:47 - Extracting claim using claims resolver.
+2024-11-24 12:06:47 - Parsing token to extract claims.
+2024-11-24 12:06:47 - Retrieving signing key.
+2024-11-24 12:06:47 - Token is not expired.
+2024-11-24 12:06:47 - Token is valid.
+2024-11-24 12:06:47 - JWT token is valid for user: dado99
+2024-11-24 12:06:47 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:06:47 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:06:47 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:06:47 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:06:47 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:06:47 - Fetching all unregistered users.
+2024-11-24 12:06:47 - Fetching all unregistered users...
+2024-11-24 12:06:47 - Unregistered users found: 505
+2024-11-24 12:06:47 - Successfully retrieved 505 unregistered users.
+2024-11-24 12:07:03 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 12:07:03 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:07:03 - Content-Type: application/json
+2024-11-24 12:07:03 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:07:03 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:07:03 - Content-Type: application/json
+2024-11-24 12:07:03 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:07:03 - Authentication request intercepted
+2024-11-24 12:07:03 - Login attempt for username: ime3
+2024-11-24 12:07:04 - Authentication successful for username: ime3
+2024-11-24 12:07:04 - User found in database: User(iduser=22225, name=ime3, surname=ime3, username=ime3, password=$2a$10$ktca7KD8v90/9y8tTpMaqepUpczymHNXYK8u.CQDVBBacpM/K68Ze, email=ime3@mail.com, reguser=1, permission=DELETE, role=ADMIN)
+2024-11-24 12:07:04 - Added claims for JWT: {role=ADMIN}
+2024-11-24 12:07:04 - Generating token with additional claims for user: ime3
+2024-11-24 12:07:04 - Generating token for user: ime3
+2024-11-24 12:07:04 - Retrieving signing key.
+2024-11-24 12:07:04 - Token generated successfully.
+2024-11-24 12:07:04 - Generated JWT for username: ime3
+2024-11-24 12:07:04 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJpbWUzIiwiaWF0IjoxNzMyNDQ2NDI0LCJleHAiOjE3MzI1MzI4MjR9.x0IBqcUcPTJJB0rZT842v6e2bQYXJkl7Ek4A0GKOwMs
+2024-11-24 12:07:04 - Extracting username from token.
+2024-11-24 12:07:04 - Extracting claim using claims resolver.
+2024-11-24 12:07:04 - Parsing token to extract claims.
+2024-11-24 12:07:04 - Retrieving signing key.
+2024-11-24 12:07:04 - Username extracted: ime3
+2024-11-24 12:07:04 - Username extracted from JWT: ime3
+2024-11-24 12:07:04 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:07:04 - Loading user by username: ime3
+2024-11-24 12:07:04 - User successfully loaded: ime3
+2024-11-24 12:07:04 - Validating token for user: ime3
+2024-11-24 12:07:04 - Extracting username from token.
+2024-11-24 12:07:04 - Extracting claim using claims resolver.
+2024-11-24 12:07:04 - Parsing token to extract claims.
+2024-11-24 12:07:04 - Retrieving signing key.
+2024-11-24 12:07:04 - Username extracted: ime3
+2024-11-24 12:07:04 - Extracting token expiration date.
+2024-11-24 12:07:04 - Extracting claim using claims resolver.
+2024-11-24 12:07:04 - Parsing token to extract claims.
+2024-11-24 12:07:04 - Retrieving signing key.
+2024-11-24 12:07:04 - Token is not expired.
+2024-11-24 12:07:04 - Token is valid.
+2024-11-24 12:07:04 - JWT token is valid for user: ime3
+2024-11-24 12:07:04 - Authentication set in SecurityContext for user: ime3
+2024-11-24 12:07:04 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:07:04 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:07:04 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:07:04 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:07:04 - Fetching all unregistered users.
+2024-11-24 12:07:04 - Fetching all unregistered users...
+2024-11-24 12:07:04 - Unregistered users found: 505
+2024-11-24 12:07:04 - Successfully retrieved 505 unregistered users.
+2024-11-24 12:07:13 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 12:07:13 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:07:13 - Content-Type: application/json
+2024-11-24 12:07:13 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:07:13 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:07:13 - Content-Type: application/json
+2024-11-24 12:07:13 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:07:13 - Authentication request intercepted
+2024-11-24 12:07:13 - Login attempt for username: lola00
+2024-11-24 12:07:13 - Authentication failed for username: lola00. Error: Bad credentials
+2024-11-24 12:07:20 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 12:07:20 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:07:20 - Content-Type: application/json
+2024-11-24 12:07:20 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:07:20 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:07:20 - Content-Type: application/json
+2024-11-24 12:07:20 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:07:20 - Authentication request intercepted
+2024-11-24 12:07:20 - Login attempt for username: lola00
+2024-11-24 12:07:20 - Authentication successful for username: lola00
+2024-11-24 12:07:20 - User found in database: User(iduser=26, name=Damjan, surname=Lolic, username=lola00, password=$2a$12$U2fVOLKzsChpRlvqiolxVekR1Wso5.YR2boKYZsiKULXR0iAHMK2O, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=USER)
+2024-11-24 12:07:20 - Added claims for JWT: {role=USER}
+2024-11-24 12:07:20 - Generating token with additional claims for user: lola00
+2024-11-24 12:07:20 - Generating token for user: lola00
+2024-11-24 12:07:20 - Retrieving signing key.
+2024-11-24 12:07:20 - Token generated successfully.
+2024-11-24 12:07:20 - Generated JWT for username: lola00
+2024-11-24 12:07:20 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInN1YiI6ImxvbGEwMCIsImlhdCI6MTczMjQ0NjQ0MCwiZXhwIjoxNzMyNTMyODQwfQ.h0TzCYijo0KGiDjvPlMcnEN4KQVGpUbhocayYHW50vk
+2024-11-24 12:07:20 - Extracting username from token.
+2024-11-24 12:07:20 - Extracting claim using claims resolver.
+2024-11-24 12:07:20 - Parsing token to extract claims.
+2024-11-24 12:07:20 - Retrieving signing key.
+2024-11-24 12:07:20 - Username extracted: lola00
+2024-11-24 12:07:20 - Username extracted from JWT: lola00
+2024-11-24 12:07:20 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:07:20 - Loading user by username: lola00
+2024-11-24 12:07:20 - User successfully loaded: lola00
+2024-11-24 12:07:20 - Validating token for user: lola00
+2024-11-24 12:07:20 - Extracting username from token.
+2024-11-24 12:07:20 - Extracting claim using claims resolver.
+2024-11-24 12:07:20 - Parsing token to extract claims.
+2024-11-24 12:07:20 - Retrieving signing key.
+2024-11-24 12:07:20 - Username extracted: lola00
+2024-11-24 12:07:20 - Extracting token expiration date.
+2024-11-24 12:07:20 - Extracting claim using claims resolver.
+2024-11-24 12:07:20 - Parsing token to extract claims.
+2024-11-24 12:07:20 - Retrieving signing key.
+2024-11-24 12:07:21 - Token is not expired.
+2024-11-24 12:07:21 - Token is valid.
+2024-11-24 12:07:21 - JWT token is valid for user: lola00
+2024-11-24 12:07:21 - Authentication set in SecurityContext for user: lola00
+2024-11-24 12:07:21 - Incoming request: http://localhost:8080/auth/2fa
+2024-11-24 12:07:21 - Content-Type: application/json
+2024-11-24 12:07:21 - Request passed WAF checks: http://localhost:8080/auth/2fa
+2024-11-24 12:07:21 - Incoming request: http://localhost:8080/auth/2fa
+2024-11-24 12:07:21 - Content-Type: application/json
+2024-11-24 12:07:21 - Request passed WAF checks: http://localhost:8080/auth/2fa
+2024-11-24 12:07:21 - Attempting to find user by username: lola00
+2024-11-24 12:07:21 - User found: lola00
+2024-11-24 12:07:21 - Sending an 2FA email to the user lola00, at mail: damirfilipovic999@gmail.com
+2024-11-24 12:07:21 - Preparing email to: damirfilipovic999@gmail.com
+2024-11-24 12:07:21 - Email successfully sent to: damirfilipovic999@gmail.com
+2024-11-24 12:07:41 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInN1YiI6ImxvbGEwMCIsImlhdCI6MTczMjQ0NjQ0MCwiZXhwIjoxNzMyNTMyODQwfQ.h0TzCYijo0KGiDjvPlMcnEN4KQVGpUbhocayYHW50vk
+2024-11-24 12:07:41 - Extracting username from token.
+2024-11-24 12:07:41 - Extracting claim using claims resolver.
+2024-11-24 12:07:41 - Parsing token to extract claims.
+2024-11-24 12:07:41 - Retrieving signing key.
+2024-11-24 12:07:41 - Username extracted: lola00
+2024-11-24 12:07:41 - Username extracted from JWT: lola00
+2024-11-24 12:07:41 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:07:41 - Loading user by username: lola00
+2024-11-24 12:07:41 - User successfully loaded: lola00
+2024-11-24 12:07:41 - Validating token for user: lola00
+2024-11-24 12:07:41 - Extracting username from token.
+2024-11-24 12:07:41 - Extracting claim using claims resolver.
+2024-11-24 12:07:41 - Parsing token to extract claims.
+2024-11-24 12:07:41 - Retrieving signing key.
+2024-11-24 12:07:41 - Username extracted: lola00
+2024-11-24 12:07:41 - Extracting token expiration date.
+2024-11-24 12:07:41 - Extracting claim using claims resolver.
+2024-11-24 12:07:41 - Parsing token to extract claims.
+2024-11-24 12:07:41 - Retrieving signing key.
+2024-11-24 12:07:41 - Token is not expired.
+2024-11-24 12:07:41 - Token is valid.
+2024-11-24 12:07:41 - JWT token is valid for user: lola00
+2024-11-24 12:07:41 - Authentication set in SecurityContext for user: lola00
+2024-11-24 12:07:41 - Incoming request: http://localhost:8080/users/get-permission
+2024-11-24 12:07:41 - Request passed WAF checks: http://localhost:8080/users/get-permission
+2024-11-24 12:07:41 - Incoming request: http://localhost:8080/users/get-permission
+2024-11-24 12:07:41 - Request passed WAF checks: http://localhost:8080/users/get-permission
+2024-11-24 12:07:41 - Fetching permissions for the current authenticated user.
+2024-11-24 12:07:41 - Authenticated user: lola00
+2024-11-24 12:07:41 - Attempting to find user by username: lola00
+2024-11-24 12:07:41 - User found: lola00
+2024-11-24 12:07:41 - Permission retrieved for user lola00: MODIFY
+2024-11-24 12:07:45 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInN1YiI6ImxvbGEwMCIsImlhdCI6MTczMjQ0NjQ0MCwiZXhwIjoxNzMyNTMyODQwfQ.h0TzCYijo0KGiDjvPlMcnEN4KQVGpUbhocayYHW50vk
+2024-11-24 12:07:45 - Extracting username from token.
+2024-11-24 12:07:45 - Extracting claim using claims resolver.
+2024-11-24 12:07:45 - Parsing token to extract claims.
+2024-11-24 12:07:45 - Retrieving signing key.
+2024-11-24 12:07:45 - Username extracted: lola00
+2024-11-24 12:07:45 - Username extracted from JWT: lola00
+2024-11-24 12:07:45 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:07:45 - Loading user by username: lola00
+2024-11-24 12:07:45 - User successfully loaded: lola00
+2024-11-24 12:07:45 - Validating token for user: lola00
+2024-11-24 12:07:45 - Extracting username from token.
+2024-11-24 12:07:45 - Extracting claim using claims resolver.
+2024-11-24 12:07:45 - Parsing token to extract claims.
+2024-11-24 12:07:45 - Retrieving signing key.
+2024-11-24 12:07:45 - Username extracted: lola00
+2024-11-24 12:07:45 - Extracting token expiration date.
+2024-11-24 12:07:45 - Extracting claim using claims resolver.
+2024-11-24 12:07:45 - Parsing token to extract claims.
+2024-11-24 12:07:45 - Retrieving signing key.
+2024-11-24 12:07:45 - Token is not expired.
+2024-11-24 12:07:45 - Token is valid.
+2024-11-24 12:07:45 - JWT token is valid for user: lola00
+2024-11-24 12:07:45 - Authentication set in SecurityContext for user: lola00
+2024-11-24 12:08:12 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInN1YiI6ImxvbGEwMCIsImlhdCI6MTczMjQ0NjQ0MCwiZXhwIjoxNzMyNTMyODQwfQ.h0TzCYijo0KGiDjvPlMcnEN4KQVGpUbhocayYHW50vk
+2024-11-24 12:08:12 - Extracting username from token.
+2024-11-24 12:08:12 - Extracting claim using claims resolver.
+2024-11-24 12:08:12 - Parsing token to extract claims.
+2024-11-24 12:08:12 - Retrieving signing key.
+2024-11-24 12:08:12 - Username extracted: lola00
+2024-11-24 12:08:12 - Username extracted from JWT: lola00
+2024-11-24 12:08:12 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:08:12 - Loading user by username: lola00
+2024-11-24 12:08:12 - User successfully loaded: lola00
+2024-11-24 12:08:12 - Validating token for user: lola00
+2024-11-24 12:08:12 - Extracting username from token.
+2024-11-24 12:08:12 - Extracting claim using claims resolver.
+2024-11-24 12:08:12 - Parsing token to extract claims.
+2024-11-24 12:08:12 - Retrieving signing key.
+2024-11-24 12:08:12 - Username extracted: lola00
+2024-11-24 12:08:12 - Extracting token expiration date.
+2024-11-24 12:08:12 - Extracting claim using claims resolver.
+2024-11-24 12:08:12 - Parsing token to extract claims.
+2024-11-24 12:08:12 - Retrieving signing key.
+2024-11-24 12:08:12 - Token is not expired.
+2024-11-24 12:08:12 - Token is valid.
+2024-11-24 12:08:12 - JWT token is valid for user: lola00
+2024-11-24 12:08:12 - Authentication set in SecurityContext for user: lola00
+2024-11-24 12:08:12 - Incoming request: http://localhost:8080/comments/unapproved-comments
+2024-11-24 12:08:12 - Request passed WAF checks: http://localhost:8080/comments/unapproved-comments
+2024-11-24 12:08:12 - Incoming request: http://localhost:8080/comments/unapproved-comments
+2024-11-24 12:08:12 - Request passed WAF checks: http://localhost:8080/comments/unapproved-comments
+2024-11-24 12:08:12 - Retrieving unapproved comments
+2024-11-24 12:08:12 - Fetching all unapproved comments
+2024-11-24 12:08:12 - Found 483 unapproved comments
+2024-11-24 12:08:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:08:32 - HikariPool-1 - Shutdown initiated...
+2024-11-24 12:08:32 - HikariPool-1 - Shutdown completed.
+2024-11-24 12:13:21 - Starting SniApplication using Java 23 with PID 11236 (C:\Users\Korisnik\Desktop\SNIBE\target\classes started by Dado in C:\Users\Korisnik\Desktop\SNIBE)
+2024-11-24 12:13:21 - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-24 12:13:21 - No active profile set, falling back to 1 default profile: "default"
+2024-11-24 12:13:21 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-24 12:13:21 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-24 12:13:21 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:13:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-24 12:13:21 - Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-11-24 12:13:21 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-24 12:13:21 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-24 12:13:21 - Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2024-11-24 12:13:22 - Tomcat initialized with port 8080 (http)
+2024-11-24 12:13:22 - Starting service [Tomcat]
+2024-11-24 12:13:22 - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-24 12:13:22 - Initializing Spring embedded WebApplicationContext
+2024-11-24 12:13:22 - Root WebApplicationContext: initialization completed in 1290 ms
+2024-11-24 12:13:22 - HikariPool-1 - Starting...
+2024-11-24 12:13:22 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14a098ff
+2024-11-24 12:13:22 - HikariPool-1 - Start completed.
+2024-11-24 12:13:22 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24 12:13:22 - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-24 12:13:22 - HHH000026: Second-level cache disabled
+2024-11-24 12:13:23 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-24 12:13:24 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24 12:13:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:13:24 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-24 12:13:25 - Filter 'jwtAuthenticationFilter' configured for use
+2024-11-24 12:13:25 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-11-24 12:13:25 - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-11-24 12:13:25 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24 12:13:26 - LiveReload server is running on port 35729
+2024-11-24 12:13:26 - Tomcat started on port 8080 (http) with context path '/'
+2024-11-24 12:13:26 - Started SniApplication in 5.689 seconds (process running for 6.41)
+2024-11-24 12:13:33 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-24 12:13:33 - Initializing Servlet 'dispatcherServlet'
+2024-11-24 12:13:33 - Completed initialization in 1 ms
+2024-11-24 12:13:33 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 12:13:33 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:13:33 - Content-Type: application/json
+2024-11-24 12:13:33 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:13:33 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:13:33 - Content-Type: application/json
+2024-11-24 12:13:33 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:13:33 - Authentication request intercepted
+2024-11-24 12:13:33 - Login attempt for username: dado99
+2024-11-24 12:13:34 - Authentication successful for username: dado99
+2024-11-24 12:13:34 - User found in database: User(iduser=1, name=Damir, surname=Filipovic, username=dado99, password=$2a$12$UQdXQ8oCUIgtfiFkQfI1VOBMrxtysmDi3ItlQ0tnYm1jxgFO.xhme, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=ADMIN)
+2024-11-24 12:13:34 - Added claims for JWT: {role=ADMIN}
+2024-11-24 12:13:34 - Generating token with additional claims for user: dado99
+2024-11-24 12:13:34 - Generating token for user: dado99
+2024-11-24 12:13:34 - Retrieving signing key.
+2024-11-24 12:13:34 - Token generated successfully.
+2024-11-24 12:13:34 - Generated JWT for username: dado99
+2024-11-24 12:13:34 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJkYWRvOTkiLCJpYXQiOjE3MzI0NDY4MTQsImV4cCI6MTczMjUzMzIxNH0.Jr2l5jkJy3LluXA6F9AOQiQj-CtXLnTdxGILi3_E6qo
+2024-11-24 12:13:34 - Extracting username from token.
+2024-11-24 12:13:34 - Extracting claim using claims resolver.
+2024-11-24 12:13:34 - Parsing token to extract claims.
+2024-11-24 12:13:34 - Retrieving signing key.
+2024-11-24 12:13:34 - Username extracted: dado99
+2024-11-24 12:13:34 - Username extracted from JWT: dado99
+2024-11-24 12:13:34 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:13:34 - Loading user by username: dado99
+2024-11-24 12:13:34 - User successfully loaded: dado99
+2024-11-24 12:13:34 - Validating token for user: dado99
+2024-11-24 12:13:34 - Extracting username from token.
+2024-11-24 12:13:34 - Extracting claim using claims resolver.
+2024-11-24 12:13:34 - Parsing token to extract claims.
+2024-11-24 12:13:34 - Retrieving signing key.
+2024-11-24 12:13:34 - Username extracted: dado99
+2024-11-24 12:13:34 - Extracting token expiration date.
+2024-11-24 12:13:34 - Extracting claim using claims resolver.
+2024-11-24 12:13:34 - Parsing token to extract claims.
+2024-11-24 12:13:34 - Retrieving signing key.
+2024-11-24 12:13:34 - Token is not expired.
+2024-11-24 12:13:34 - Token is valid.
+2024-11-24 12:13:34 - JWT token is valid for user: dado99
+2024-11-24 12:13:34 - Authentication set in SecurityContext for user: dado99
+2024-11-24 12:13:34 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:13:34 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:13:34 - Incoming request: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:13:34 - Request passed WAF checks: http://localhost:8080/users/get-unregistered-users
+2024-11-24 12:13:34 - Fetching all unregistered users.
+2024-11-24 12:13:34 - Fetching all unregistered users...
+2024-11-24 12:13:34 - Unregistered users found: 505
+2024-11-24 12:13:35 - Successfully retrieved 505 unregistered users.
+2024-11-24 12:13:50 - No Authorization header found or it does not start with 'Bearer '. Request URI: /auth/login
+2024-11-24 12:13:50 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:13:50 - Content-Type: application/json
+2024-11-24 12:13:50 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:13:50 - Incoming request: http://localhost:8080/auth/login
+2024-11-24 12:13:50 - Content-Type: application/json
+2024-11-24 12:13:50 - Request passed WAF checks: http://localhost:8080/auth/login
+2024-11-24 12:13:50 - Authentication request intercepted
+2024-11-24 12:13:50 - Login attempt for username: lola00
+2024-11-24 12:13:51 - Authentication successful for username: lola00
+2024-11-24 12:13:51 - User found in database: User(iduser=26, name=Damjan, surname=Lolic, username=lola00, password=$2a$12$U2fVOLKzsChpRlvqiolxVekR1Wso5.YR2boKYZsiKULXR0iAHMK2O, email=damirfilipovic999@gmail.com, reguser=1, permission=MODIFY, role=USER)
+2024-11-24 12:13:51 - Added claims for JWT: {role=USER}
+2024-11-24 12:13:51 - Generating token with additional claims for user: lola00
+2024-11-24 12:13:51 - Generating token for user: lola00
+2024-11-24 12:13:51 - Retrieving signing key.
+2024-11-24 12:13:51 - Token generated successfully.
+2024-11-24 12:13:51 - Generated JWT for username: lola00
+2024-11-24 12:13:51 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInN1YiI6ImxvbGEwMCIsImlhdCI6MTczMjQ0NjgzMSwiZXhwIjoxNzMyNTMzMjMxfQ.5BvmK2kfqVhB1wIzeoi1XKlwOdCWS85VYSAx58Ly-cU
+2024-11-24 12:13:51 - Extracting username from token.
+2024-11-24 12:13:51 - Extracting claim using claims resolver.
+2024-11-24 12:13:51 - Parsing token to extract claims.
+2024-11-24 12:13:51 - Retrieving signing key.
+2024-11-24 12:13:51 - Username extracted: lola00
+2024-11-24 12:13:51 - Username extracted from JWT: lola00
+2024-11-24 12:13:51 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:13:51 - Loading user by username: lola00
+2024-11-24 12:13:51 - User successfully loaded: lola00
+2024-11-24 12:13:51 - Validating token for user: lola00
+2024-11-24 12:13:51 - Extracting username from token.
+2024-11-24 12:13:51 - Extracting claim using claims resolver.
+2024-11-24 12:13:51 - Parsing token to extract claims.
+2024-11-24 12:13:51 - Retrieving signing key.
+2024-11-24 12:13:51 - Username extracted: lola00
+2024-11-24 12:13:51 - Extracting token expiration date.
+2024-11-24 12:13:51 - Extracting claim using claims resolver.
+2024-11-24 12:13:51 - Parsing token to extract claims.
+2024-11-24 12:13:51 - Retrieving signing key.
+2024-11-24 12:13:51 - Token is not expired.
+2024-11-24 12:13:51 - Token is valid.
+2024-11-24 12:13:51 - JWT token is valid for user: lola00
+2024-11-24 12:13:51 - Authentication set in SecurityContext for user: lola00
+2024-11-24 12:13:51 - Incoming request: http://localhost:8080/auth/2fa
+2024-11-24 12:13:51 - Content-Type: application/json
+2024-11-24 12:13:51 - Request passed WAF checks: http://localhost:8080/auth/2fa
+2024-11-24 12:13:51 - Incoming request: http://localhost:8080/auth/2fa
+2024-11-24 12:13:51 - Content-Type: application/json
+2024-11-24 12:13:51 - Request passed WAF checks: http://localhost:8080/auth/2fa
+2024-11-24 12:13:51 - Attempting to find user by username: lola00
+2024-11-24 12:13:51 - User found: lola00
+2024-11-24 12:13:51 - Sending an 2FA email to the user lola00, at mail: damirfilipovic999@gmail.com
+2024-11-24 12:13:51 - Preparing email to: damirfilipovic999@gmail.com
+2024-11-24 12:13:52 - Email successfully sent to: damirfilipovic999@gmail.com
+2024-11-24 12:14:00 - JWT Token extracted: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInN1YiI6ImxvbGEwMCIsImlhdCI6MTczMjQ0NjgzMSwiZXhwIjoxNzMyNTMzMjMxfQ.5BvmK2kfqVhB1wIzeoi1XKlwOdCWS85VYSAx58Ly-cU
+2024-11-24 12:14:00 - Extracting username from token.
+2024-11-24 12:14:00 - Extracting claim using claims resolver.
+2024-11-24 12:14:00 - Parsing token to extract claims.
+2024-11-24 12:14:00 - Retrieving signing key.
+2024-11-24 12:14:00 - Username extracted: lola00
+2024-11-24 12:14:00 - Username extracted from JWT: lola00
+2024-11-24 12:14:00 - SecurityContext is empty, proceeding with token validation.
+2024-11-24 12:14:00 - Loading user by username: lola00
+2024-11-24 12:14:00 - User successfully loaded: lola00
+2024-11-24 12:14:00 - Validating token for user: lola00
+2024-11-24 12:14:00 - Extracting username from token.
+2024-11-24 12:14:00 - Extracting claim using claims resolver.
+2024-11-24 12:14:00 - Parsing token to extract claims.
+2024-11-24 12:14:00 - Retrieving signing key.
+2024-11-24 12:14:00 - Username extracted: lola00
+2024-11-24 12:14:00 - Extracting token expiration date.
+2024-11-24 12:14:00 - Extracting claim using claims resolver.
+2024-11-24 12:14:00 - Parsing token to extract claims.
+2024-11-24 12:14:00 - Retrieving signing key.
+2024-11-24 12:14:00 - Token is not expired.
+2024-11-24 12:14:00 - Token is valid.
+2024-11-24 12:14:00 - JWT token is valid for user: lola00
+2024-11-24 12:14:00 - Authentication set in SecurityContext for user: lola00
+2024-11-24 12:14:00 - Incoming request: http://localhost:8080/users/get-permission
+2024-11-24 12:14:00 - Request passed WAF checks: http://localhost:8080/users/get-permission
+2024-11-24 12:14:00 - Incoming request: http://localhost:8080/users/get-permission
+2024-11-24 12:14:00 - Request passed WAF checks: http://localhost:8080/users/get-permission
+2024-11-24 12:14:00 - Fetching permissions for the current authenticated user.
+2024-11-24 12:14:00 - Authenticated user: lola00
+2024-11-24 12:14:00 - Attempting to find user by username: lola00
+2024-11-24 12:14:00 - User found: lola00
+2024-11-24 12:14:00 - Permission retrieved for user lola00: MODIFY
+2024-11-24 12:14:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-24 12:14:18 - HikariPool-1 - Shutdown initiated...
+2024-11-24 12:14:18 - HikariPool-1 - Shutdown completed.
